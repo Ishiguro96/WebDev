@@ -5,10 +5,10 @@
 
 <div class="menu">
     <ul class="menu-ul">
-        <li>Smth 1</li>
-        <li>Smth 2</li>
-        <li>Smth 3</li>
-        <li>Smth 4</li>
+        <li><a href="Index.php">Smth 1</a></li>
+        <li><a href="Index.php">Smth 2</a></li>
+        <li><a href="Index.php">Smth 3</a></li>
+        <li><a href="Index.php">Smth 4</a></li>
         <hr>
         <?php if(isset($_SESSION['logged_in'])){ ?>
             <li><a href="Userpanel.php">User Panel</a></li>

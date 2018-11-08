@@ -1,6 +1,6 @@
 .grid
     display: grid
-    grid-template-columns: 1fr auto
+    grid-template-columns: auto auto
     grid-template-areas: "header header" "navigation_section login_section" "main menu" "footer footer"
 
 .header-top
@@ -30,15 +30,14 @@
 
 
 .menu
-    padding: 15px
     border: 1px solid black
+    text-align: center
     grid-column: 2 / 3
 
 
 .footer
     padding: 15px
     border: 1px solid cyan
-
     text-align: center
 
     grid-column: 1 / 3

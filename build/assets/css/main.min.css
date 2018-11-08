@@ -1,8 +1,9 @@
 html {
-  font-family: sans-serif;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
-  font-family: sans-serif; }
+  font-family: sans-serif;
+  box-sizing: border-box;
+  background-color: darkgrey; }
 
 body {
   margin: 0;
@@ -10,7 +11,7 @@ body {
 
 .grid {
   display: grid;
-  grid-template-columns: 1fr auto;
+  grid-template-columns: auto auto;
   grid-template-areas: "header header" "navigation_section login_section" "main menu" "footer footer"; }
 
 .header-top {
@@ -37,8 +38,8 @@ body {
   grid-column: 1 / 2; }
 
 .menu {
-  padding: 15px;
   border: 1px solid black;
+  text-align: center;
   grid-column: 2 / 3; }
 
 .footer {
@@ -65,28 +66,60 @@ body {
   .footer {
     grid-column: 2 / 4; } }
 
+input {
+  padding: 6px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical; }
+
 .navigation_bar {
   display: inline; }
 
 ul.nav li {
   display: block;
   list-style: none;
-  padding: 5px;
+  padding: 10px 10px 0px;
   float: left; }
+  ul.nav li a {
+    color: #000000;
+    text-decoration: none; }
+  ul.nav li a.active {
+    background-color: #4CAF50;
+    color: white; }
+  ul.nav li a:hover:not(.active) {
+    background-color: #555;
+    color: white; }
 
 ul.menu-ul li {
   display: block; }
+  ul.menu-ul li a {
+    color: #000000;
+    text-decoration: none; }
+  ul.menu-ul li a:hover {
+    background-color: #555;
+    color: white; }
 
 .header-top {
-  background-image: url("../Images/zdjincie.jpeg");
-  background-position: bottom center;
+  position: relative;
+  background-image: url("../Images/Background.jpg");
+  background-position: center center;
   background-repeat: no-repeat;
   background-attachment: local;
   background-size: cover;
-  color: black; }
+  background-blend-mode: color;
+  object-fit: scale-down;
+  color: white; }
 
 .footer {
-  font-size: 12px; }
+  padding: 5px;
+  border: 1px solid cyan;
+  font-style: italic; }
 
-body {
-  background: #FFFFFF; }
+.fsearch {
+  text-align: center; }
+
+.tsearch {
+  width: 100%; }
+
+table.tsearch th, tr {
+  border: 1px solid black; }

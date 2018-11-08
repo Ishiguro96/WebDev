@@ -4,7 +4,6 @@
 ?>
 
 <div class='navigation_section'>
-    <p>Navigation bar</p>
     <ul class="nav">
         <li><a href="Index.php">Home Page</a></li>
         <li><a href="Index.php">Maybe some other link</a></li>

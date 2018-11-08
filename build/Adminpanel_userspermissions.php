@@ -27,7 +27,13 @@
 
     $errors = array(); //Array to store errors
 
-    $user_check_query = "SELECT users.ID, users.username, ranks.description, ranks.name FROM users INNER JOIN ranks ON users.rankID = ranks.ID";
+    $username = "";
+    if($_SERVER['REQUEST_METHOD'] == "POST"){
+      $username = mysqli_real_escape_string($db, $_POST['search-username']);
+    }
+    $user_check_query = "SELECT users.ID, users.username, ranks.description, ranks.name FROM users INNER JOIN ranks ON users.rankID = ranks.ID WHERE users.username LIKE '%$username%'";
+
+
     $user_query_result = mysqli_query($db, $user_check_query);
 
     $available_ranks_query = "SELECT name, description FROM ranks";
@@ -58,42 +64,54 @@
         ?>
 
         <div class="main">
-            <table style="width: 100%;">
-                <tr>
-                    <th>Username</th>
-                    <th>Rank</th>
-                </tr>
-                <?php
-                    while($user_results = mysqli_fetch_assoc($user_query_result)){ $iter++; ?>
-                <tr>
-                    <th><p id="table_user"> <?php echo $user_results['username']; ?> </p></th>
-                    <th><p id="table_rank_desc"> <?php echo $user_results['description']; ?> </p></th>
 
-                    <th>
-                    <form method="post">
-                        <p id="table_permission">
-                        <input type="hidden" id="username_form_adminpanel" name="username" value="<?php echo $user_results['username']; ?>">
-                        <select onchange="this.form.submit()" name="selected_rank" <?php if($user_results['name'] == 'superadmin') echo "disabled"; ?> >
-                            <?php
-                                foreach($ranks as $arr){
-									if($arr != "Super Administrator"){
-										if($arr == $user_results['description']){
-											echo "<option selected>" . $arr . "</option>";
-										}
-										else{
-											echo "<option>" . $arr . "</option>";
-										}
-									}
+
+          <form action="<?php echo $_SERVER['PHP_SELF']; ?>" class="fsearch" method="post">
+            <input type="text" placeholder="Search username" name="search-username">
+            <button type="submit" class="b-search">Search</button>
+          </form>
+
+
+          <table class="tsearch">
+            <tr>
+                <th>Username</th>
+                <th>Current Rank</th>
+                <th>Edit Rank</th>
+            </tr>
+              <?php
+                  while($user_results = mysqli_fetch_assoc($user_query_result)){ $iter++; ?>
+              <tr>
+                  <th><p id="table_user"> <?php echo $user_results['username']; ?> </p></th>
+                  <th><p id="table_rank_desc"> <?php echo $user_results['description']; ?> </p></th>
+
+                  <th>
+                  <form method="post">
+                      <p id="table_permission">
+                      <input type="hidden" id="username_form_adminpanel" name="username" value="<?php echo $user_results['username']; ?>">
+                      <select onchange="this.form.submit()" name="selected_rank" <?php if($user_results['name'] == 'superadmin') echo "disabled"; ?> >
+                          <?php
+                              foreach($ranks as $arr){
+              									if($arr != "Super Administrator"){
+              										if($arr == $user_results['description']){
+              											echo "<option selected>" . $arr . "</option>";
+              										}
+              										else{
+              											echo "<option>" . $arr . "</option>";
+              										}
+              									}
+                                else if($user_results['description'] == "Super Administrator"){
+                                  echo "<option selected>" . $arr . "</option>";
                                 }
-                            ?>
-                        </select>
-                        </p>
-                    </form>
-                    </th>
+                              }
+                          ?>
+                      </select>
+                      </p>
+                  </form>
+                  </th>
 
-                </tr>
-                <?php } ?>
-            </table>
+              </tr>
+              <?php } ?>
+          </table>
         </div>
 
 
