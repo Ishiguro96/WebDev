@@ -9,14 +9,14 @@
         header("Location: Index.php");
     }
 
-    
+
 ?>
 
 <!DOCTYPE html>
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="CSS/Style.css" />
+<link rel="stylesheet" href="Assets/CSS/main.min.css" />
 
 </head>
 <body>
@@ -27,16 +27,16 @@
 
         <div class="main">
             <h1>ADMIN PANEL</h1>
-            
+
             <input type="button" onclick="location.href='Adminpanel_userspermissions.php';" value="Change users permissions" />
-            
+
         </div>
 
 
 
         <?php
             include("Menu.php");
-        
+
             include("Footer.php");
         ?>
     </div>

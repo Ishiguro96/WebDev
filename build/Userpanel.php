@@ -9,14 +9,14 @@
 
     $errors = array();
     $message = "";
-    
+
 	if($_SERVER['REQUEST_METHOD'] == 'POST' && $_SESSION['logged_in'] == TRUE){
         //If clicked button to change password
         if(isset($_POST['Change_password_request'])){
             $old_password = mysqli_real_escape_string($db, $_POST['old_password']); //Remove special chars from old password
             $new_password = mysqli_real_escape_string($db, $_POST['new_password']); //Remove special chars from new password
             $new_password_repeat = mysqli_real_escape_string($db, $_POST['new_password_repeat']); //Remove special chars from repeated password
-            
+
             //Check if fields are filled
             if(empty($old_password)){
                 array_push($errors, "Old passwrod is empty!");
@@ -27,33 +27,33 @@
             if(empty($new_password_repeat)){
                 array_push($errors, "Repeated password is empty!");
             }
-            
+
             //Check if new password is identical to old password
             if($old_password == $old_password && $old_password == $new_password_repeat){
                 array_push($errors, "New password cannot be the same as old one");
             }
-            
+
             //Check if new passwords are indentical
             if($new_password != $new_password_repeat){
                 array_push($errors, "Passwords do not match!");
             }
-            
+
             //Check password chars and lenght
             if(!VerifyPassword($new_password, 6)){
                 array_push($errors, "Invalid form of new password!");
             }
-            
+
             //If no errors occured
             if(count($errors) == 0){
                 $temp_userlogin = $_SESSION['user_login']; //Temporary variable
                 $sql = "SELECT ID, password FROM users WHERE username='$temp_userlogin'";
                 $query_result = mysqli_query($db, $sql);
                 $results = mysqli_fetch_assoc($query_result);
-                
+
                 if(!isset($results['ID'])){
                     array_push($errors, "Error with database!");
                 }
-                
+
                 if($results['password'] == hash('sha512', $old_password) && count($errors) == 0){
                     $temp_password = hash('sha512', $new_password); //Temporary variable
                     $temp_userid = $results['ID']; //Temporary variable
@@ -70,34 +70,34 @@
                 }
             }
         }
-        
+
         //If clicked button to change e-mail
         if(isset($_POST['Change_email_request'])){
             $new_email = mysqli_real_escape_string($db, $_POST['new_mail']); //Remove special chars from new e-mail
-            
+
             //Check if fields are filled
             if(empty($new_email)){
                 array_push($errors, "E-mail field is empty!");
             }
-            
+
             //Check password chars and lenght
             if(!VerifyEmail($new_email)){
                 array_push($errors, "Invalid form of new e-mail!");
             }
-            
+
             //If no errors occured
             if(count($errors) == 0){
                 $temp_userlogin = $_SESSION['user_login']; //Temporary variable
                 $sql = "SELECT email FROM users";
                 $query_result = mysqli_query($db, $sql);
-                
+
                 while($results = mysqli_fetch_assoc($query_result)){
                     if($results['email'] == $new_email){
                         array_push($errors, "This e-mail already exists!");
                         break;
                     }
                 }
-                
+
                 if(count($errors) == 0){
                     $temp_email = $new_email; //Temporary variable
                     $temp_userid = $_SESSION['user_id']; //Temporary variable
@@ -121,7 +121,7 @@
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="CSS/Style.css" />
+<link rel="stylesheet" href="Assets/CSS/main.min.css" />
 
 </head>
 <body>

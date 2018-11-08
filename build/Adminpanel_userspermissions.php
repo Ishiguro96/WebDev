@@ -12,7 +12,7 @@
         $temp2 = $result['ID'];
         $sql = "UPDATE users INNER JOIN ranks ON users.rankID = ranks.ID  SET users.rankID='$temp2' WHERE users.username='$temp'";
         $query = mysqli_query($db, $sql);
-        
+
         if($_SESSION['user_login'] == $_POST['username']){
             $_SESSION['user_rank'] = $result['name'];
         }
@@ -41,14 +41,14 @@
 
     $iter = 0;
 
-    
+
 ?>
 
 <!DOCTYPE html>
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="CSS/Style.css" />
+<link rel="stylesheet" href="Assets/CSS/main.min.css" />
 
 </head>
 <body>
@@ -68,7 +68,7 @@
                 <tr>
                     <th><p id="table_user"> <?php echo $user_results['username']; ?> </p></th>
                     <th><p id="table_rank_desc"> <?php echo $user_results['description']; ?> </p></th>
-                    
+
                     <th>
                     <form method="post">
                         <p id="table_permission">
@@ -90,17 +90,17 @@
                         </p>
                     </form>
                     </th>
-                    
+
                 </tr>
                 <?php } ?>
-            </table>           
+            </table>
         </div>
 
 
 
         <?php
             include("Menu.php");
-        
+
             include("Footer.php");
         ?>
     </div>
