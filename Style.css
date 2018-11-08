@@ -1,0 +1,22 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+
+
+
+#navigation_bar {
+    display: inline;
+}
+
+
+
+ul.menu-ul li {
+    display: block;
+}
+
+#footer {
+    font-size: 12px;
+}

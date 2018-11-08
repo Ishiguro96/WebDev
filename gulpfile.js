@@ -44,13 +44,13 @@ gulp.task('sass', function() {
             suffix: '.min'
           }))
 
-        .pipe(gulp.dest('build/assets/css'));
+        .pipe(gulp.dest('build/Assets/CSS'));
 });
 
 gulp.task('images', function() {
     gulp.src('source/img/*')
         .pipe(images())
-        .pipe(gulp.dest('build/assets/img'));
+        .pipe(gulp.dest('build/Assets/img'));
 });
 
 // Uglify js files
@@ -58,7 +58,7 @@ gulp.task('scripts', function() {
     gulp.src('source/js/*.js')
         .pipe(plumber())
         .pipe(uglify())
-        .pipe(gulp.dest('build/assets/js'));
+        .pipe(gulp.dest('build/Assets/js'));
 });
 
 //Concat and Compress Vendor .js files
@@ -71,7 +71,7 @@ gulp.task('vendors', function() {
         .pipe(plumber())
         .pipe(concat('vendors.js'))
         .pipe(uglify())
-        .pipe(gulp.dest('build/assets/js'));
+        .pipe(gulp.dest('build/Assets/js'));
 });
 
 
@@ -96,4 +96,4 @@ gulp.task('watch', function(){
 
 
 // use default task to launch Browsersync and watch JS files
-gulp.task('default', [ 'sass', 'scripts', 'vendors', 'watch'], function () {});
+gulp.task('default', [ 'sass', 'scripts', 'vendors'], function () {});

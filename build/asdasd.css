@@ -1,0 +1,124 @@
+* {
+    box-sizing: border-box;
+    
+}
+
+
+.header {
+     background-image: url("http://weszlo.com/wp-content/uploads/2018/07/esport-835x420.jpeg");
+    background-position: bottom center;
+    background-repeat: no-repeat;
+    background-attachment: local;
+    border: 0px solid black;
+    padding: 15px;
+    text-align: center;
+    font-family: "Times New Roman", Times, serif;
+    color: white;
+    
+}
+.navigation_wrapper {
+    border: 0px groove black;
+    padding: 0px;
+    text-align: center;
+    overflow: auto;
+    font-family: "Times New Roman", Times, serif;
+}
+.login_section{
+    border: 2px solid red;
+    padding: inherit;
+    text-align: center;
+    width: 20%;
+    float: right;
+    font-family: "Times New Roman", Times, serif;
+}
+.navigation_section{
+    border: 0px solid blue;
+    padding: inherit;
+    text-align: center;
+    width: 75%;
+    float: left;
+    font-family: "Times New Roman", Times, serif;
+}
+.menu {
+    width: 20%;
+    float: right;
+    padding: 20px;
+    border: 2px solid black;
+    text-align: center;
+    font-family: "Times New Roman", Times, serif;
+}
+.main {
+    width: 75%;
+    float: left;
+    padding: 15px;
+    border: 0px solid black;
+    text-align: center;
+    font-family: "Times New Roman", Times, serif;
+    margin-top: 50px;
+}
+
+.navigation_section{
+    display: inline-table;
+    text-align: center;
+    font-family: "Times New Roman", Times, serif;
+}
+
+#navigation_bar {
+    display: inline;
+    text-align: center;
+    font-family: "Times New Roman", Times, serif;
+}
+
+ul.nav li {
+    display: block;
+    list-style: none;
+    padding: 5px;
+    text-align: center;
+    font-family: "Times New Roman", Times, serif;
+}
+
+ul.nav li {
+    float:left;
+    width: 20%;
+    padding: 5px;
+    display: table;
+    font-family: "Times New Roman", Times, serif;
+}
+
+
+ul.menu-ul li {
+    display:subgrid;
+    text-align: center;
+    font-family: "Times New Roman", Times, serif;
+}
+
+.registration_title{
+    float: left;
+     display: block;
+    list-style: none;
+    padding: 5px;
+    text-align: center;
+    font-family: "Times New Roman", Times, serif
+    
+}
+
+
+
+
+
+
+
+
+.footer {
+    width: 100%;
+    float: left;
+    padding: 5px;
+    border: 0px solid cyan;
+    text-align: center;
+    font-family: "Times New Roman", Times, serif;
+    font-style: italic;
+    margin-top: 500px;
+}
+#footer {
+    font-size: 12px;
+}
