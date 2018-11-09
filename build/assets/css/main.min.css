@@ -112,8 +112,7 @@ ul.menu-ul li {
 
 .footer {
   padding: 5px;
-  border: 1px solid cyan;
-  font-style: italic; }
+  font-style: bold; }
 
 .fsearch {
   text-align: center; }
