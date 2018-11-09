@@ -1,14 +1,14 @@
 <?php
 	require("Config.php"); //Include database onfiguration file
 	session_start(); //Start user-unique session
-    
+
 	if($_SERVER['REQUEST_METHOD'] == 'POST'){
 		$username = mysqli_real_escape_string($db, $_POST['username']); //Remove special chars from username
 		$password = mysqli_real_escape_string($db, $_POST['password']); //Remove special chars from password
 		$password = hash('sha512', $password);
 
 		//echo "Debug 1: Username = " . $username . " Password = " . $password . "<br><br>";
-        
+
         $sql = "SELECT users.username, users.ID, ranks.name, ranks.description FROM users INNER JOIN ranks ON users.rankID = ranks.ID  WHERE username = '$username' AND password='$password'";
 		$query_result = mysqli_query($db, $sql); //Query above statement to MySQL
         //if($query_result){
