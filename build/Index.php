@@ -18,7 +18,7 @@
 
         <div class="main">
             <h1>Main Page</h1>
-            <p>This is the Main Page of the </p>
+            <p>This is the Main Page of the project</p>
         </div>
 
         <?php

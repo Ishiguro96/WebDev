@@ -77,7 +77,7 @@
                 <th>Username</th>
                 <th>Current Rank</th>
                 <th>Edit Rank</th>
-                <th>Remove User</th>
+                <th>Remove</th>
             </tr>
               <?php
                   while($user_results = mysqli_fetch_assoc($user_query_result)){ $iter++; ?>
@@ -110,7 +110,7 @@
                   </form>
                 </td>
                 <td>
-                  NI USUNIESZ MIE
+                  <i class="fas fa-times-circle"></i>
                 </td>
 
               </tr>
