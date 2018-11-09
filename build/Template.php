@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="Main_style.css" />
+<?php include('CSS_meta.php'); ?>
 
 </head>
 <body>

@@ -13,7 +13,7 @@
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="Main_style.css" />
+<?php include('CSS_meta.php'); ?>
 
 </head>
 <body>
@@ -23,14 +23,14 @@
         ?>
 
         <div class="main">
-            <h2>TEMPLATE</h2>
+            <h2>TEMPLATE - ADMIN ONLY PAGE</h2>
         </div>
 
 
 
         <?php
             include("Menu.php");
-        
+
             include("Footer.php");
         ?>
     </div>

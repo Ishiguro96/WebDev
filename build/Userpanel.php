@@ -121,7 +121,7 @@
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="Assets/CSS/main.min.css" />
+<?php include('CSS_meta.php'); ?>
 
 </head>
 <body>

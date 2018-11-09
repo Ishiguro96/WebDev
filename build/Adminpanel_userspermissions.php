@@ -54,7 +54,7 @@
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="Assets/CSS/main.min.css" />
+<?php include('CSS_meta.php'); ?>
 
 </head>
 <body>
@@ -68,7 +68,7 @@
 
           <form action="<?php echo $_SERVER['PHP_SELF']; ?>" class="fsearch" method="post">
             <input type="text" placeholder="Search username" name="search-username">
-            <button type="submit" class="b-search">Search</button>
+            <button type="submit" class="b-search"><i class="fas fa-search fa-1x"></i></button>
           </form>
 
 
@@ -77,14 +77,15 @@
                 <th>Username</th>
                 <th>Current Rank</th>
                 <th>Edit Rank</th>
+                <th>Remove User</th>
             </tr>
               <?php
                   while($user_results = mysqli_fetch_assoc($user_query_result)){ $iter++; ?>
               <tr>
-                  <th><p id="table_user"> <?php echo $user_results['username']; ?> </p></th>
-                  <th><p id="table_rank_desc"> <?php echo $user_results['description']; ?> </p></th>
+                  <td><p id="table_user"> <?php echo $user_results['username']; ?> </p></th>
+                  <td><p id="table_rank_desc"> <?php echo $user_results['description']; ?> </p></th>
 
-                  <th>
+                  <td>
                   <form method="post">
                       <p id="table_permission">
                       <input type="hidden" id="username_form_adminpanel" name="username" value="<?php echo $user_results['username']; ?>">
@@ -107,7 +108,10 @@
                       </select>
                       </p>
                   </form>
-                  </th>
+                </td>
+                <td>
+                  NI USUNIESZ MIE
+                </td>
 
               </tr>
               <?php } ?>

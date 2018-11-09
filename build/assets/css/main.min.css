@@ -111,8 +111,11 @@ ul.menu-ul li {
   color: white; }
 
 .footer {
-  padding: 5px;
+  padding: 2px;
   font-style: italic; }
+
+#footer {
+  font-size: 10px; }
 
 .fsearch {
   text-align: center; }
@@ -120,5 +123,14 @@ ul.menu-ul li {
 .tsearch {
   width: 100%; }
 
-table.tsearch th, tr {
-  border: 1px solid black; }
+table.tsearch {
+  border-collapse: collapse; }
+  table.tsearch th {
+    color: black;
+    font-size: 18px;
+    background-color: yellow; }
+  table.tsearch th, table.tsearch tr, table.tsearch td {
+    border: 1px solid black;
+    text-align: center; }
+  table.tsearch tr:nth-child(odd) {
+    background-color: #837f7f; }
