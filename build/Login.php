@@ -13,7 +13,7 @@
 		$query_result = mysqli_query($db, $sql); //Query above statement to MySQL
         //if($query_result){
             $results = mysqli_fetch_assoc($query_result); //Fetch results as associative array
-            echo "Debug 2: results = " . implode(" ", $results) . " ------- " . mysqli_num_rows($query_result) ."<br><br>";
+            //echo "Debug 2: results = " . implode(" ", $results) . " ------- " . mysqli_num_rows($query_result) ."<br><br>";
 
             if(mysqli_num_rows($query_result) == 1){
                 $_SESSION['user_login'] = $results["username"];
