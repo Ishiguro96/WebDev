@@ -11,7 +11,7 @@ body {
 
 .grid {
   display: grid;
-  grid-template-columns: auto auto;
+  grid-template-columns: 1fr auto;
   grid-template-areas: "header header" "navigation_section login_section" "main menu" "footer footer"; }
 
 .header-top {
@@ -51,7 +51,7 @@ body {
 @media screen and (min-width: 736px) {
   .grid {
     display: grid;
-    grid-template-columns: 50px auto auto 50px;
+    grid-template-columns: 50px 1fr auto 50px;
     grid-template-areas: ". header-top header-top ." ". navigation_section login_section ." ". main menu ." ". footer footer ."; }
   .header-top {
     grid-column: 2 / 4; }
@@ -91,7 +91,8 @@ ul.nav li {
     color: white; }
 
 ul.menu-ul li {
-  display: block; }
+  display: block;
+  padding: 0px; }
   ul.menu-ul li a {
     color: #000000;
     text-decoration: none; }

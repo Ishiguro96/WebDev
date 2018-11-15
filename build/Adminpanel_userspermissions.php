@@ -4,6 +4,7 @@
     session_start();
 
     if($_SERVER['REQUEST_METHOD'] == 'POST'){
+      if(ISSET($_POST['username'])){
         $tmp = $_POST['selected_rank'];
         $sql = "SELECT ID, name FROM ranks WHERE description='$tmp'";
         $query = mysqli_query($db, $sql);
@@ -16,13 +17,21 @@
         if($_SESSION['user_login'] == $_POST['username']){
             $_SESSION['user_rank'] = $result['name'];
         }
+      }
+
+      else if(ISSET($_POST['user_ID'])){
+        echo "ziziuziuziuziuziu";
+        $temp = $_POST['user_ID'];
+        $sql = "DELETE FROM users WHERE ID='$temp'";
+        $query = mysqli_query($db, $sql);
+      }
     }
 
     if(!$_SESSION['logged_in'] || !isset($_SESSION['user_rank'])){
-        header("Location: Index.php");
+      header("Location: Index.php");
     }
     if($_SESSION['user_rank'] != 'admin' && $_SESSION['user_rank'] != 'superadmin'){
-        header("Location: Index.php");
+      header("Location: Index.php");
     }
 
     $errors = array(); //Array to store errors
@@ -31,7 +40,7 @@
     if($_SERVER['REQUEST_METHOD'] == "POST"){
       $username = mysqli_real_escape_string($db, $_POST['search-username']);
     }
-    $user_check_query = "SELECT users.ID, users.username, ranks.description, ranks.name FROM users INNER JOIN ranks ON users.rankID = ranks.ID WHERE users.username LIKE '%$username%'";
+    $user_check_query = "SELECT users.ID, users.username, ranks.description, ranks.name FROM users INNER JOIN ranks ON users.rankID = ranks.ID WHERE users.username LIKE '%$username%' ORDER BY users.ID ASC";
 
 
     $user_query_result = mysqli_query($db, $user_check_query);
@@ -110,15 +119,18 @@
                   </form>
                 </td>
                 <td>
-                  <i class="fas fa-times-circle"></i>
+                  <form method="post" id='deletion<?php echo $user_results['ID']; ?>'>
+                    <?php if($user_results['name'] != 'superadmin') { ?>
+                    <input type="hidden" id="username_form_adminpanel" name="user_ID" value="<?php echo $user_results['ID']; ?>">
+                    <button type="button" onclick="PopUp(<?php echo $user_results['ID']; ?>);"><i class="fas fa-times-circle"></i></button>
+                    <?php } ?>
+                  </form>
                 </td>
 
               </tr>
               <?php } ?>
           </table>
         </div>
-
-
 
         <?php
             include("Menu.php");
@@ -127,4 +139,13 @@
         ?>
     </div>
 </body>
+
+<script>
+function PopUp(ID) {
+    if(confirm("Do you really want to delete this user?")) {
+        document.getElementById('deletion' + ID).submit();
+    }
+}
+</script>
+
 </html>

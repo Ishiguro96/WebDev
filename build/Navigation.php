@@ -6,9 +6,9 @@
 <div class='navigation_section'>
     <ul class="nav">
         <li><a href="Index.php">Home Page</a></li>
-        <li><a href="Index.php">Maybe some other link</a></li>
-        <li><a href="Index.php">Maybe some other link #2</a></li>
-        <li><a href="Index.php">Maybe some other link #3</a></li>
-        <li><a href="Index.php">Maybe some other link #4</a></li>
+        <li><a href="Index.php">Counter-Strike</a></li>
+        <li><a href="Index.php">League of Legends</a></li>
+        <li><a href="Index.php">DotA 2</a></li>
+        <li><a href="Index.php">HeartStone</a></li>
     </ul>
 </div>

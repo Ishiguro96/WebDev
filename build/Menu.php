@@ -9,7 +9,7 @@
         <li><a href="Index.php">Smth 2</a></li>
         <li><a href="Index.php">Smth 3</a></li>
         <li><a href="Index.php">Smth 4</a></li>
-        <hr>
+        <br>
         <?php if(isset($_SESSION['logged_in'])){ ?>
             <li><a href="Userpanel.php">User Panel</a></li>
             <?php if($_SESSION['user_rank'] == 'superadmin' || $_SESSION['user_rank'] == 'admin'){ ?>
