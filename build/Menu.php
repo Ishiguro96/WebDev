@@ -6,9 +6,9 @@
 <div class="menu">
     <ul class="menu-ul">
         <li><a href="Index.php">Smth 1</a></li>
-        <li><a href="Index.php">Smth 2</a></li>
-        <li><a href="Index.php">Smth 3</a></li>
-        <li><a href="Index.php">Smth 4</a></li>
+        <li><a1 href="Index.php">Smth 2</a></li>
+        <li><a2 href="Index.php">Smth 3</a></li>
+        <li><a3 href="Index.php">Smth 4</a></li>
         <hr>
         <?php if(isset($_SESSION['logged_in'])){ ?>
             <li><a href="Userpanel.php">User Panel</a></li>

@@ -3,7 +3,7 @@
         header("Location: Index.php");
 ?>
 <div class="header-top">
-  <h1>IT Project - Main Page</h1>
+  <h1>Future Sports</h1>
 </div>
 
 <?php
