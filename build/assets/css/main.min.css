@@ -53,6 +53,8 @@ body {
     display: grid;
     grid-template-columns: 50px 1fr auto 50px;
     grid-template-areas: ". header-top header-top ." ". navigation_section login_section ." ". main menu ." ". footer footer ."; }
+  .grid_bg {
+    grid-column: 2/4; }
   .header-top {
     grid-column: 2 / 4; }
   .login_section {
@@ -72,23 +74,24 @@ input {
   border-radius: 4px;
   resize: vertical; }
 
-.navigation_bar {
+.navigation_section {
   display: inline; }
 
 ul.nav li {
   display: block;
   list-style: none;
-  padding: 10px 10px 0px;
-  float: left; }
+  padding-top: 20px;
+  padding-bottom: 20px;
+  float: left;
+  width: 20%;
+  height: 100%; }
   ul.nav li a {
     color: #000000;
     text-decoration: none; }
   ul.nav li a.active {
-    background-color: #4CAF50;
-    color: white; }
+    background-color: inherit; }
   ul.nav li a:hover:not(.active) {
-    background-color: #555;
-    color: white; }
+    background-color: #555; }
 
 ul.menu-ul li {
   display: block;
@@ -102,14 +105,21 @@ ul.menu-ul li {
 
 .header-top {
   position: relative;
-  background-image: url("../Images/Background.jpg");
+  background-image: url("../Images/header.png");
   background-position: center center;
   background-repeat: no-repeat;
   background-attachment: local;
   background-size: cover;
   background-blend-mode: color;
   object-fit: scale-down;
-  color: white; }
+  color: white;
+  height: 480px;
+  width: 620;
+  background-color: black;
+  text-align: left;
+  font-size: 50px;
+  font-style: italic;
+  padding-left: 100px; }
 
 .footer {
   padding: 2px;
@@ -127,7 +137,7 @@ ul.menu-ul li {
 table.tsearch {
   border-collapse: collapse; }
   table.tsearch th {
-    color: black;
+    color: white;
     font-size: 18px;
     background-color: yellow; }
   table.tsearch th, table.tsearch tr, table.tsearch td {
