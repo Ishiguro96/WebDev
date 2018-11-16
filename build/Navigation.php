@@ -4,11 +4,11 @@
 ?>
 
 <div class='navigation_section'>
-    <ul class="nav">
-        <li class="home"><a href="Index.php">Home Page</a></li>
-        <li class="lol"><a href="Index.php">Maybe some other link</a></li>
-        <li class="starcraft"><a href="Index.php">Maybe some other link #2</a></li>
-        <li class="dota2"><a href="Index.php">Maybe some other link #3</a></li>
-        <li class="cs" ><a href="Index.php">Maybe some other link #4</a></li>
-    </ul>
+    <span class="nav">
+        <span id="home"><a href="Index.php">Home Page</a></span>
+        <span id="lol"><a href="Index.php">Maybe some other link</a></span>
+        <span id="starcraft"><a href="Index.php">Maybe some other link #2</a></span>
+        <span id="dota2"><a href="Index.php">Maybe some other link #3</a></span>
+        <span id="cs" ><a href="Index.php">Maybe some other link #4</a></span>
+    </span>
 </div>

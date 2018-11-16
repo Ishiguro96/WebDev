@@ -1,7 +1,9 @@
 .grid
     display: grid
     grid-template-columns: 1fr auto
+    grid-template-rows: auto auto auto auto
     grid-template-areas: "header header" "navigation_section login_section" "main menu" "footer footer"
+    column-fill: auto
     color: white
 
 .header-top
@@ -20,6 +22,8 @@
 .navigation_section
     border: 1px solid blue
     padding: inherit
+    display: inline-table
+    align-items: center
     text-align: center
     grid-column: 1 / 2
 
@@ -33,6 +37,7 @@
 .menu
     border: 1px solid black
     text-align: center
+    display: block
     grid-column: 2 / 3
 
 

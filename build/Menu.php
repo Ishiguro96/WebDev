@@ -4,19 +4,17 @@
 ?>
 
 <div class="menu">
-    <ul class="menu-ul">
-        <li><a href="Index.php">Smth 1</a></li>
-        <li><a href="Index.php">Smth 2</a></li>
-        <li><a href="Index.php">Smth 3</a></li>
-        <li><a href="Index.php">Smth 4</a></li>
-        <br>
-        <?php if(isset($_SESSION['logged_in'])){ ?>
-            <li><a href="Userpanel.php">User Panel</a></li>
-            <?php if($_SESSION['user_rank'] == 'superadmin' || $_SESSION['user_rank'] == 'admin'){ ?>
-                <li><a href="Adminpanel.php">Admin Panel</a></li>
-            <?php } ?>
-        <?php } else { ?>
-            <li><a href="Register_form.php">Register</a></li>
-        <?php } ?>
-    </ul>
+  <a class="menu-link" href="Index.php">Smth 1</a>
+  <a class="menu-link" href="Index.php">Smth 2</a>
+  <a class="menu-link" href="Index.php">Smth 3</a>
+  <a  class="menu-link"href="Index.php">Smth 4</a>
+  <br>
+  <?php if(isset($_SESSION['logged_in'])){ ?>
+    <a class="menu-link" href="Userpanel.php">User Panel</a></li>
+  <?php if($_SESSION['user_rank'] == 'superadmin' || $_SESSION['user_rank'] == 'admin'){ ?>
+    <a class="menu-link" href="Adminpanel.php">Admin Panel</a></li>
+  <?php } ?>
+  <?php } else { ?>
+    <a class="menu-link" href="Register_form.php">Register</a></li>
+  <?php } ?>
 </div>
