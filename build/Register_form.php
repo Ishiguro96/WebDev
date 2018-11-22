@@ -110,10 +110,11 @@
 				<hr>
 
 				<?php
-					foreach($register_errors as $err){
-						echo $err . "<br>";
-					}
-				?>
+					foreach($register_errors as $err){ ?>
+						<div class="alert alert-danger" role="alert">
+  						<?php echo $err; ?>
+						</div>
+				<?php } ?>
 
       </div>
     </div>

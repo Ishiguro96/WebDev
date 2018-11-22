@@ -3,7 +3,7 @@
         header("Location: Index.php");
 ?>
 
-<div class="container" style="border: 1px dashed red">
+<div style="border: 1px dashed red">
   LOGO<br>
   LOGO<br>
   LOGO<br>
