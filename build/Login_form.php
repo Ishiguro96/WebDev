@@ -7,7 +7,7 @@
   if(isset($_SESSION['logged_in'])){ ?>
 
     <h5>Hello, <?php echo $_SESSION['user_login']; ?></h5>
-    <button class="btn btn-outline-warning btn-sm" type="submit">Logout</button>
+    <button class="btn btn-outline-warning btn-sm" onclick="window.location.href='Logout.php'">Logout</button>
 
   <?php } else { ?>
 
