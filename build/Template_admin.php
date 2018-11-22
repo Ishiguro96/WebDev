@@ -9,30 +9,36 @@
     }
 ?>
 
+<?php
+    session_start();
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<?php include('CSS_meta.php'); ?>
+<?php require('CSS_meta.php'); ?>
 
 </head>
 <body>
-    <div class="grid">
-        <?php
-            include("Header.php");
-        ?>
 
-        <div class="main">
-            <h2>TEMPLATE - ADMIN ONLY PAGE</h2>
-        </div>
+  <?php require('Header.php'); ?>
 
+  <main role="main">
+  <div class="container">
+    <div class="row">
 
+      <?php include('Menu.php'); ?>
 
-        <?php
-            include("Menu.php");
-
-            include("Footer.php");
-        ?>
+      <div class="col-md-10 order-md-1 h-100 content" style="border: 1px dashed yellow">
+        TEMPLATE ADMIN FILE
+      </div>
     </div>
+  </div>
+
+  <?php include('footer.php'); ?>
+
+  </main>
+
+  <?php require('JScript_meta.php'); ?>
 </body>
 </html>

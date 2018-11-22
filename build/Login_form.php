@@ -3,22 +3,18 @@
         header("Location: Index.php");
 ?>
 
-<div class="login_section">
-    <?php
+<?php
+  if(isset($_SESSION['logged_in'])){ ?>
 
-    if(isset($_SESSION['logged_in'])){ ?>
+    <h3>Hello, <?php echo $_SESSION['user_login']; ?></h3>
+    <input type="button" onclick="location.href='Logout.php';" value="Logout"/>
 
-        <h3>Hello, <?php echo $_SESSION['user_login']; ?></h3>
-        <input type="button" onclick="location.href='Logout.php';" value="Logout"/>
+  <?php } else { ?>
 
-    <?php
-    } else { ?>
-        <form action = "Login.php" method = "post">
-            <input type = "text" name = "username" class = "box" placeholder="Username"/><br><br>
-            <input type = "password" name = "password" class = "box" placeholder="Password"/><br><br>
-            <input type = "submit" value = " Submit "/><br/>
-        </form>
-    <?php
-        }
-    ?>
-</div>
+    <form class="form-inline justify-content-center" action = "Login.php" method = "post">
+      <input class="form-control-sm mr-sm-2" type = "text" name = "username" class = "box" placeholder="Username"/><br><br>
+      <input class="form-control-sm mr-sm-2" type = "password" name = "password" class = "box" placeholder="Password"/><br><br>
+      <button class="btn btn-outline-warning btn-sm" type="submit"><i class="fas fa-sign-in-alt"></i></button>
+    </form>
+
+  <?php } ?>

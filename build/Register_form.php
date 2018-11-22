@@ -76,43 +76,53 @@
 	}
 ?>
 
+<?php
+    session_start();
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<?php include('CSS_meta.php'); ?>
+<?php require('CSS_meta.php'); ?>
 
 </head>
 <body>
-    <div class="grid">
-        <?php
-            include("Header.php");
-        ?>
-        <div class="main">
-            <h2 id="registration_title">Registration form</h2>
-            <p id="register">Register new user:</p>
-            <form action = "<?php echo $_SERVER['PHP_SELF']; ?>" method = "post">
-                <label>Username* :</label> <input type = "text" name = "register_username" class = "box"/><br><br>
-                <label>E-mail* :</label> <input type = "text" name = "register_email" class = "box" /><br><br>
-                <label>Password* :</label> <input type = "password" name = "register_password" class = "box" /><br><br>
-                <label>Confirm password* :</label> <input type = "password" name = "register_confirm_password" class = "box" /><br><br>
-                <input type = "submit" value = " Submit "/><br/>
-            </form>
-            <hr>
-            <?php
-                foreach($register_errors as $err){
-                    echo $err . "<br>";
-                }
-            ?>
-        </div>
 
+  <?php require('Header.php'); ?>
 
+  <main role="main">
+  <div class="container">
+    <div class="row">
 
-        <?php
-            include("Menu.php");
+      <?php include('Menu.php'); ?>
 
-            include("Footer.php");
-        ?>
+      <div class="col-md-10 order-md-1 h-100 content" style="border: 1px dashed yellow">
+				<h2 id="registration_title">Registration form</h2>
+				<p id="register">Register new user:</p>
+				<form action = "<?php echo $_SERVER['PHP_SELF']; ?>" method = "post">
+					<label>Username* :</label> <input type = "text" name = "register_username" class = "box"/><br><br>
+					<label>E-mail* :</label> <input type = "text" name = "register_email" class = "box" /><br><br>
+					<label>Password* :</label> <input type = "password" name = "register_password" class = "box" /><br><br>
+					<label>Confirm password* :</label> <input type = "password" name = "register_confirm_password" class = "box" /><br><br>
+					<input type = "submit" value = " Submit "/><br/>
+				</form>
+
+				<hr>
+
+				<?php
+					foreach($register_errors as $err){
+						echo $err . "<br>";
+					}
+				?>
+
+      </div>
     </div>
+  </div>
+
+  <?php include('footer.php'); ?>
+
+  </main>
+
+  <?php require('JScript_meta.php'); ?>
 </body>
 </html>

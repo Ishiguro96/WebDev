@@ -117,55 +117,60 @@
 	}
 ?>
 
+<?php
+    session_start();
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<?php include('CSS_meta.php'); ?>
+<?php require('CSS_meta.php'); ?>
 
 </head>
 <body>
-    <div class="grid">
-        <?php
-            include("Header.php");
-        ?>
 
-        <div class="main">
-            <h2 id="userpanel_title">User Panel</h2>
+  <?php require('Header.php'); ?>
 
-            <p id="userpanel">Change password:</p>
-            <form action = "<?php echo $_SERVER['PHP_SELF']; ?>" method = "post">
-                <label>Old password :</label> <input type = "password" name = "old_password" class = "box"/><br><br>
-                <label>New password :</label> <input type = "password" name = "new_password" class = "box" /><br><br>
-                <label>Repeat new password :</label> <input type = "password" name = "new_password_repeat" class = "box" /><br><br>
-                <input type = "submit" value = "Change password" name="Change_password_request"/><br/>
-            </form>
+  <main role="main">
+  <div class="container">
+    <div class="row">
 
-            <hr>
+      <?php include('Menu.php'); ?>
 
-            <p id="userpanel">Change email:</p>
-            <form action = "<?php echo $_SERVER['PHP_SELF']; ?>" method = "post">
-                <label>New e-mail :</label> <input type = "text" name = "new_mail" class = "box"/><br><br>
-                <input type = "submit" value = "Change e-mail" name="Change_email_request"/><br/>
-            </form>
+      <div class="col-md-10 order-md-1 h-100 content" style="border: 1px dashed yellow">
+        <h2 id="userpanel_title">User Panel</h2>
 
-            <hr>
+        <p id="userpanel">Change password:</p>
+        <form action = "<?php echo $_SERVER['PHP_SELF']; ?>" method = "post">
+          <label>Old password :</label> <input type = "password" name = "old_password" class = "box"/><br><br>
+          <label>New password :</label> <input type = "password" name = "new_password" class = "box" /><br><br>
+          <label>Repeat new password :</label> <input type = "password" name = "new_password_repeat" class = "box" /><br><br>
+          <input type = "submit" value = "Change password" name="Change_password_request"/><br/>
+        </form>
 
-            <?php
-                foreach($errors as $err){
-                    echo $err . "<br>";
-                }
-            ?>
-            <p id="message_success"><?php echo $message; ?></p>
+        <hr style="background-color: orange">
 
-        </div>
-
-
+        <p id="userpanel">Change email:</p>
+          <form action = "<?php echo $_SERVER['PHP_SELF']; ?>" method = "post">
+          <label>New e-mail :</label> <input type = "text" name = "new_mail" class = "box"/><br><br>
+          <input type = "submit" value = "Change e-mail" name="Change_email_request"/><br/>
+        </form>
 
         <?php
-            include("Menu.php");
-            include("Footer.php");
+          foreach($errors as $err){
+            echo $err . "<br>";
+          }
         ?>
+        <p id="message_success"><?php echo $message; ?></p>
+
+      </div>
     </div>
+  </div>
+
+  <?php include('footer.php'); ?>
+
+  </main>
+
+  <?php require('JScript_meta.php'); ?>
 </body>
 </html>

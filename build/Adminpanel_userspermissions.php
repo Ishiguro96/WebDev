@@ -59,93 +59,104 @@
 
 ?>
 
+<?php
+    session_start();
+?>
+
 <!DOCTYPE html>
-<html lang="pl">
+<html>
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<?php include('CSS_meta.php'); ?>
+<?php require('CSS_meta.php'); ?>
 
 </head>
 <body>
-    <div class="grid">
-        <?php
-            include("Header.php");
-        ?>
 
-        <div class="main">
+  <?php require('Header.php'); ?>
+
+  <main role="main">
+  <div class="container">
+    <div class="row">
+
+      <?php include('Menu.php'); ?>
+
+      <div class="col-md-10 order-md-1 h-100 content" style="border: 1px dashed yellow">
+
+        <form action="<?php echo $_SERVER['PHP_SELF']; ?>" class="fsearch" method="post">
+          <input type="text" placeholder="Search username" name="search-username">
+          <button type="submit" class="b-search"><i class="fas fa-search fa-1x"></i></button>
+        </form>
 
 
-          <form action="<?php echo $_SERVER['PHP_SELF']; ?>" class="fsearch" method="post">
-            <input type="text" placeholder="Search username" name="search-username">
-            <button type="submit" class="b-search"><i class="fas fa-search fa-1x"></i></button>
-          </form>
+        <table class="tsearch">
+          <tr>
+            <th>Username</th>
+            <th>Current Rank</th>
+            <th>Edit Rank</th>
+            <th>Remove</th>
+          </tr>
+          <?php
+            while($user_results = mysqli_fetch_assoc($user_query_result)){ $iter++; ?>
+          <tr>
+            <td><p id="table_user"> <?php echo $user_results['username']; ?> </p></th>
+            <td><p id="table_rank_desc"> <?php echo $user_results['description']; ?> </p></th>
 
+            <td>
+            <form method="post">
+              <p id="table_permission">
+              <input type="hidden" id="username_form_adminpanel" name="username" value="<?php echo $user_results['username']; ?>">
+              <select onchange="this.form.submit()" name="selected_rank" <?php if($user_results['name'] == 'superadmin') echo "disabled"; ?> >
 
-          <table class="tsearch">
-            <tr>
-                <th>Username</th>
-                <th>Current Rank</th>
-                <th>Edit Rank</th>
-                <th>Remove</th>
-            </tr>
               <?php
-                  while($user_results = mysqli_fetch_assoc($user_query_result)){ $iter++; ?>
-              <tr>
-                  <td><p id="table_user"> <?php echo $user_results['username']; ?> </p></th>
-                  <td><p id="table_rank_desc"> <?php echo $user_results['description']; ?> </p></th>
+                foreach($ranks as $arr){
+                  if($arr != "Super Administrator"){
+                    if($arr == $user_results['description']){
+                      echo "<option selected>" . $arr . "</option>";
+                    }
+                    else{
+                      echo "<option>" . $arr . "</option>";
+                    }
+                  }
+                  else if($user_results['description'] == "Super Administrator"){
+                    echo "<option selected>" . $arr . "</option>";
+                  }
+                } ?>
 
-                  <td>
-                  <form method="post">
-                      <p id="table_permission">
-                      <input type="hidden" id="username_form_adminpanel" name="username" value="<?php echo $user_results['username']; ?>">
-                      <select onchange="this.form.submit()" name="selected_rank" <?php if($user_results['name'] == 'superadmin') echo "disabled"; ?> >
-                          <?php
-                              foreach($ranks as $arr){
-              									if($arr != "Super Administrator"){
-              										if($arr == $user_results['description']){
-              											echo "<option selected>" . $arr . "</option>";
-              										}
-              										else{
-              											echo "<option>" . $arr . "</option>";
-              										}
-              									}
-                                else if($user_results['description'] == "Super Administrator"){
-                                  echo "<option selected>" . $arr . "</option>";
-                                }
-                              }
-                          ?>
-                      </select>
-                      </p>
-                  </form>
-                </td>
-                <td>
-                  <form method="post" id='deletion<?php echo $user_results['ID']; ?>'>
-                    <?php if($user_results['name'] != 'superadmin') { ?>
-                    <input type="hidden" id="username_form_adminpanel" name="user_ID" value="<?php echo $user_results['ID']; ?>">
-                    <button type="button" onclick="PopUp(<?php echo $user_results['ID']; ?>);"><i class="fas fa-times-circle fa-3x"></i></button>
-                    <?php } ?>
-                  </form>
-                </td>
+                </select>
+                </p>
+              </form>
+              </td>
+              <td>
+                <form method="post" id='deletion<?php echo $user_results['ID']; ?>'>
+                  <?php if($user_results['name'] != 'superadmin') { ?>
+                  <input type="hidden" id="username_form_adminpanel" name="user_ID" value="<?php echo $user_results['ID']; ?>">
+                  <button type="button" onclick="PopUp(<?php echo $user_results['ID']; ?>);"><i class="fas fa-times-circle fa-3x"></i></button>
+                  <?php } ?>
+                </form>
+              </td>
 
-              </tr>
-              <?php } ?>
-          </table>
-        </div>
+            </tr>
+            <?php } ?>
+        </table>
 
-        <?php
-            include("Menu.php");
-
-            include("Footer.php");
-        ?>
+      </div>
     </div>
+  </div>
+
+  <?php include('footer.php'); ?>
+
+  </main>
+
+  <?php require('JScript_meta.php'); ?>
+
+
+  <script>
+  function PopUp(ID) {
+      if(confirm("Do you really want to delete this user?")) {
+          document.getElementById('deletion' + ID).submit();
+      }
+  }
+  </script>
+
+
 </body>
-
-<script>
-function PopUp(ID) {
-    if(confirm("Do you really want to delete this user?")) {
-        document.getElementById('deletion' + ID).submit();
-    }
-}
-</script>
-
 </html>

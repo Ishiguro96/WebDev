@@ -12,33 +12,38 @@
 
 ?>
 
+<?php
+    session_start();
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<?php include('CSS_meta.php'); ?>
+<?php require('CSS_meta.php'); ?>
 
 </head>
 <body>
-    <div class="grid">
-        <?php
-            include("Header.php");
-        ?>
 
-        <div class="main">
-            <h1>ADMIN PANEL</h1>
+  <?php require('Header.php'); ?>
 
-            <input type="button" onclick="location.href='Adminpanel_userspermissions.php';" value="Change users permissions" />
+  <main role="main">
+  <div class="container">
+    <div class="row">
 
-        </div>
+      <?php include('Menu.php'); ?>
 
+      <div class="col-md-10 order-md-1 h-100 content" style="border: 1px dashed yellow">
+        <h1>ADMIN PANEL</h1>
 
-
-        <?php
-            include("Menu.php");
-
-            include("Footer.php");
-        ?>
+        <input type="button" onclick="location.href='Adminpanel_userspermissions.php';" value="Change users permissions" />
+      </div>
     </div>
+  </div>
+
+  <?php include('footer.php'); ?>
+
+  </main>
+
+  <?php require('JScript_meta.php'); ?>
 </body>
 </html>

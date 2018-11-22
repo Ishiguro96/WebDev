@@ -3,18 +3,18 @@
         header("Location: Index.php");
 ?>
 
-<div class="menu">
-  <a class="menu-link" href="Index.php">Smth 1</a>
-  <a class="menu-link" href="Index.php">Smth 2</a>
-  <a class="menu-link" href="Index.php">Smth 3</a>
-  <a  class="menu-link"href="Index.php">Smth 4</a>
+<div class="col-md-auto order-md-2 submenu h-100" id="submenu" style="border: 1px dashed lime">
+  <a id="link" href="Index.php">Smth 1</a>
+  <a id="link" href="Index.php">Smth 2</a>
+  <a id="link" href="Index.php">Smth 3</a>
+  <a id="link" href="Index.php">Smth 4</a>
   <br>
   <?php if(isset($_SESSION['logged_in'])){ ?>
-    <a class="menu-link" href="Userpanel.php">User Panel</a></li>
+    <a id="link" href="Userpanel.php">User Panel</a></li>
   <?php if($_SESSION['user_rank'] == 'superadmin' || $_SESSION['user_rank'] == 'admin'){ ?>
-    <a class="menu-link" href="Adminpanel.php">Admin Panel</a></li>
+    <a id="link" href="Adminpanel.php">Admin Panel</a></li>
   <?php } ?>
   <?php } else { ?>
-    <a class="menu-link" href="Register_form.php">Register</a></li>
+    <a id="link" href="Register_form.php">Register</a></li>
   <?php } ?>
 </div>
