@@ -18,16 +18,16 @@
           <a class="nav-link" href="Index.php"><i class="fas fa-home fa-2x"></i></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Counter-Strike</a>
+          <a class="nav-link" href="counter.php">Counter-Strike</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">League of Legends</a>
+          <a class="nav-link" href="lol_main.php">League of Legends</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link disabled" href="#">OTHER GAME</a>
+          <a class="nav-link disabled" href="dota.php">Dota 2</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link disabled" href="#">OTHER GAME</a>
+          <a class="nav-link disabled" href="hearthstone.php">Hearthstone</a>
         </li>
         </ul>
 
