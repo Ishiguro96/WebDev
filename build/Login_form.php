@@ -6,8 +6,8 @@
 <?php
   if(isset($_SESSION['logged_in'])){ ?>
 
-    <h3>Hello, <?php echo $_SESSION['user_login']; ?></h3>
-    <input type="button" onclick="location.href='Logout.php';" value="Logout"/>
+    <h5>Hello, <?php echo $_SESSION['user_login']; ?></h5>
+    <button class="btn btn-outline-warning btn-sm" type="submit">Logout</button>
 
   <?php } else { ?>
 
