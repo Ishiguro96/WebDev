@@ -6,6 +6,6 @@
 
 <div style="border: 1px dashed red">
 
-  <img src="..." class="img-fluid" alt="Responsive image">
+  <img src="Assets/Images/header.png" class="img-fluid" alt="Responsive image">
 
 </div>
