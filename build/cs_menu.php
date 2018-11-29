@@ -3,7 +3,7 @@
         header("Location: Index.php");
 ?>
 
-<div class="col-md-auto order-md-2 submenu h-100" id="submenu" style="border: 1px dashed lime">
+<div class="col-md-auto order-md-2 submenu h-100" id="submenu">
   <a id="link" href="cs_news.php">News</a>
   <a id="link" href="cs_major.php">Katowice Major 2019</a>
   <a id="link" href="cs_ple.php">PLE</a>

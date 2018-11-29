@@ -1,5 +1,5 @@
 html body {
-  background-color: #333333;
+  background-image: linear-gradient(black, #333333);
   font-family: sans-serif;
   color: #ffffff; }
 
@@ -14,11 +14,44 @@ body {
 header {
   text-align: center; }
 
+.header-image-container {
+  position: relative;
+  width: 100%;
+  text-align: left; }
+  .header-image-container h2 {
+    position: absolute;
+    top: 80%;
+    left: 15%;
+    width: auto;
+    border: 0px;
+    border-radius: 12px;
+    border-color: rgba(0, 0, 0, 0.6);
+    background: rgba(0, 0, 0, 0.6); }
+    .header-image-container h2 span {
+      color: white;
+      font-size: 42px;
+      letter-spacing: -1px;
+      padding: 10px; }
+
+.header-image {
+  background-image: url("img_girl.jpg");
+  /* Full height */
+  max-height: 100vh;
+  width: 100%;
+  /* Center and scale the image nicely */
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.6; }
+
 .navbar {
   background-color: black; }
 
 .content {
-  background-color: #505050; }
+  background-color: #505050;
+  padding: 4px;
+  border: 0px;
+  border-radius: 16px; }
 
 .submenu #link {
   display: block;
@@ -34,9 +67,12 @@ header {
   right: 0px; }
 
 .fsearch {
+  margin-top: 16px;
   text-align: center; }
 
 .tsearch {
+  margin-top: 10px;
+  margin-bottom: 26px;
   width: 100%; }
 
 table.tsearch {
@@ -52,6 +88,10 @@ table.tsearch {
     background-color: #837f7f; }
 
 .sticky.is-sticky {
+  border: 0px;
+  border-bottom: 6px;
+  border-color: orange;
+  border-style: solid;
   position: fixed;
   top: 0;
   left: 0;
@@ -60,6 +100,11 @@ table.tsearch {
   z-index: 1000; }
 
 footer {
+  width: auto;
+  margin-top: 25px;
+  background: orange;
+  border: 3px;
+  border-radius: 16px;
   text-align: center;
     text-align-padding: 2px;
     text-align-font-style: italic; }

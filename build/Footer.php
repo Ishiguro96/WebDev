@@ -4,6 +4,6 @@
 ?>
 
 
-<footer class="container" style="border: 1px dashed black">
+<footer class="container">
     <p id="footer">Tobor Dawid &amp; Woźniak Paweł <?php echo date("Y"); ?></p>
 </footer>

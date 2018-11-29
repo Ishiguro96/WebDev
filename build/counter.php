@@ -18,7 +18,7 @@
 
       <?php include('cs_menu.php'); ?>
 
-      <div class="col-md-10 order-md-1 h-100 content" style="border: 1px dashed yellow">
+      <div class="col-md order-md-1 h-100 content" id="content">
         About CS:GO
 Counter-Strike: Global Offensive (CS:GO) expands upon the team-based first person shooter gameplay the original Counter-Strike pioneered when it launched in 1999. Two teams compete in multiple rounds of objective-based game modes with the goal of winning enough rounds to win the match.
 CS:GO features new maps, characters, and weapons and delivers updated versions of the classic Counter-Strike maps like Dust, Inferno, Nuke, Train, and more. In addition, CS:GO introduces new game modes like Arms Race, Flying Scoutsman and Wingman, and features online matchmaking and Competitive Skill Groups.
@@ -54,11 +54,9 @@ This Casual 8v8 game mode features reduced gravity, does not penalize players fo
       </div>
     </div>
   </div>
+  </main>
 
   <?php include('footer.php'); ?>
-
-
-  </main>
 
   <?php require('JScript_meta.php'); ?>
 </body>

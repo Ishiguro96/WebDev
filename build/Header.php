@@ -8,7 +8,7 @@
   <?php include('Logo.php'); ?>
 
   <div id="container-12">
-    <nav class="navbar navbar-expand-xl navbar-dark justify-content-center" style="border: 1px dashed cyan; background-color: #333333" data-toggle="sticky-onscroll">
+    <nav class="navbar navbar-expand-xl navbar-dark justify-content-center" id="navbar" data-toggle="sticky-onscroll">
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
         <i class="fas fa-align-justify"></i>
       </button>
@@ -18,16 +18,16 @@
           <a class="nav-link" href="Index.php"><i class="fas fa-home fa-2x"></i></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="counter.php">Counter-Strike</a>
+          <a class="nav-link" href="counter.php#navbar">Counter-Strike</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="lol_main.php">League of Legends</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link disabled" href="dota.php">Dota 2</a>
+          <a class="nav-link disabled" href="#">Dota 2</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link disabled" href="hearthstone.php">Hearthstone</a>
+          <a class="nav-link disabled" href="#">Hearthstone</a>
         </li>
         </ul>
 

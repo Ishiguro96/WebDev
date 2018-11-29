@@ -4,8 +4,8 @@
         header("Location: Index.php");
 ?>
 
-<div style="border: 1px dashed red">
 
-  <img src="Assets/Images/header.png" class="img-fluid" alt="Responsive image">
-
+<div class="header-image-container">
+  <img src="Assets/Images/header.jpg" class="header-image" alt="Header Logo">
+  <h2><span>Future Sports</span></h2>
 </div>
