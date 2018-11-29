@@ -19,7 +19,7 @@
       <?php include('Menu.php'); ?>
 
       <div class="col-md-10 order-md-1 h-100 content" >
-    Teams
+        Teams
       </div>
     </div>
   </div>

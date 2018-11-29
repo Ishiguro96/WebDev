@@ -16,9 +16,9 @@
   <div class="container">
     <div class="row">
 
-      <?php include('hearth_menu.php'); ?>
+      <?php include('Menu.php'); ?>
 
-      <div class="col-md-10 order-md-1 h-100 content" style="border: 1px dashed yellow">
+      <div class="col-md order-md-1 h-100 content">
         Polish
       </div>
     </div>

@@ -3,7 +3,7 @@
         header("Location: Index.php");
 ?>
 
-<a id="link" href="lol_news.php">News</a>
-<a id="link" href="lol_leaderboard.php">LEC Leaderboard</a>
-<a id="link" href="lol_teams.php">LEC teams</a>
-<a id="link" href="lol_calendar.php">Calendar</a>
+<a id="link" href="lol_news.php?type=lol#navbar">News</a>
+<a id="link" href="lol_leaderboard.php?type=lol#navbar">LEC Leaderboard</a>
+<a id="link" href="lol_teams.php?type=lol#navbar">LEC teams</a>
+<a id="link" href="lol_calendar.php?type=lol#navbar">Calendar</a>

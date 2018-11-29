@@ -18,7 +18,7 @@
 
       <?php include('Menu.php'); ?>
 
-        <div class="col-md order-md-1 h-100 content">
+      <div class="col-md order-md-1 h-100 content">
         News
       </div>
     </div>
