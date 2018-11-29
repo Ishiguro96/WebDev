@@ -19,7 +19,7 @@
       <?php include('Menu.php'); ?>
 
       <div class="col-md order-md-1 h-100 content">
-        Leagues
+        LCK
       </div>
     </div>
   </div>
