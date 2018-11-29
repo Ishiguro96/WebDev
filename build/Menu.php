@@ -15,6 +15,9 @@
       else if($_GET['type'] == 'dota'){
         include('dota_menu.php');
       }
+      else if($_GET['type'] == 'hearthstone'){
+        include('hearth_menu.php');
+      }
     ?>
   <?php } else {?>
     <a id="link" href="Index.php#logo">Smth 1</a>

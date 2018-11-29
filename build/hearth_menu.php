@@ -3,18 +3,7 @@
         header("Location: Index.php");
 ?>
 
-<div class="col-md-auto order-md-2 submenu h-100" id="submenu" style="border: 1px dashed lime">
-  <a id="link" href="hearth_news.php">News</a>
-  <a id="link" href="hearth_global.php">Global Games</a>
-  <a id="link" href="hearth_playoffs.php">Winter Playoffs</a>
-  <a id="link" href="hearth_polish.php">Polish Players</a>
-  <hr style="background-color: orange">
-  <?php if(isset($_SESSION['logged_in'])){ ?>
-    <a id="link" href="Userpanel.php">User Panel</a></li>
-  <?php if($_SESSION['user_rank'] == 'superadmin' || $_SESSION['user_rank'] == 'admin'){ ?>
-    <a id="link" href="Adminpanel.php">Admin Panel</a></li>
-  <?php } ?>
-  <?php } else { ?>
-    <a id="link" href="Register_form.php">Register</a></li>
-  <?php } ?>
-</div>
+  <a id="link" href="hearth_news.php?type=hearth#navbar">News</a>
+  <a id="link" href="hearth_global.php?type=hearth#navbar">Global Games</a>
+  <a id="link" href="hearth_playoffs.php?type=hearth#navbar">Winter Playoffs</a>
+  <a id="link" href="hearth_polish.php?type=hearh#navbar">Polish Players</a>

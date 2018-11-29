@@ -24,10 +24,10 @@
           <a class="nav-link" href="lol_main.php?type=lol#logo">League of Legends</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link disabled" href="#logo">Dota 2</a>
+          <a class="nav-link" href="dota.php?type=dota#logo">Dota 2</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link disabled" href="#logo">Hearthstone</a>
+          <a class="nav-link" href="hearthstone.php?type=hearthstone#logo">Hearthstone</a>
         </li>
         </ul>
 
