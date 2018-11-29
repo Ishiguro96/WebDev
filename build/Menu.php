@@ -17,18 +17,18 @@
       }
     ?>
   <?php } else {?>
-    <a id="link" href="Index.php">Smth 1</a>
-    <a id="link" href="Index.php">Smth 2</a>
-    <a id="link" href="Index.php">Smth 3</a>
-    <a id="link" href="Index.php">Smth 4</a>
+    <a id="link" href="Index.php#logo">Smth 1</a>
+    <a id="link" href="Index.php#logo">Smth 2</a>
+    <a id="link" href="Index.php#logo">Smth 3</a>
+    <a id="link" href="Index.php#logo">Smth 4</a>
   <?php } ?>
   <hr style="background-color: orange">
   <?php if(isset($_SESSION['logged_in'])){ ?>
-    <a id="link" href="Userpanel.php">User Panel</a></li>
+    <a id="link" href="Userpanel.php#logo">User Panel</a></li>
   <?php if($_SESSION['user_rank'] == 'superadmin' || $_SESSION['user_rank'] == 'admin'){ ?>
-    <a id="link" href="Adminpanel.php">Admin Panel</a></li>
+    <a id="link" href="Adminpanel.php#logo">Admin Panel</a></li>
   <?php } ?>
   <?php } else { ?>
-    <a id="link" href="Register_form.php">Register</a></li>
+    <a id="link" href="Register_form.php#logo">Register</a></li>
   <?php } ?>
 </div>

@@ -137,7 +137,7 @@
 
       <?php include('Menu.php'); ?>
 
-      <div class="col-md-10 order-md-1 h-100 content" style="border: 1px dashed yellow">
+      <div class="col-md order-md-1 h-100 content">
         <h2 id="userpanel_title">User Panel</h2>
 
         <p id="userpanel">Change password:</p>

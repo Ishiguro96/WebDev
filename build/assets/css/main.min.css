@@ -24,9 +24,12 @@ header {
     left: 15%;
     width: auto;
     border: 0px;
-    border-radius: 12px;
-    border-color: rgba(0, 0, 0, 0.6);
-    background: rgba(0, 0, 0, 0.6); }
+    border-bottom: 6px;
+    border-color: orange;
+    border-style: solid;
+    border-radius: 6px;
+    background: black;
+    opacity: 0.6; }
     .header-image-container h2 span {
       color: white;
       font-size: 42px;
@@ -46,6 +49,8 @@ header {
 
 .navbar {
   background-color: black; }
+  .navbar h5 {
+    padding: 10px; }
 
 .content {
   background-color: #505050;

@@ -7,5 +7,5 @@
 
 <div class="header-image-container">
   <img src="Assets/Images/header.jpg" class="header-image" alt="Header Logo">
-  <h2><span>Future Sports</span></h2>
+  <h2 id='logo'><span>Future Sports</span></h2>
 </div>

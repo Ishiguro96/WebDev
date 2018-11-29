@@ -15,19 +15,19 @@
       <div class="collapse navbar-collapse" id="navbarCollapse">
         <ul class="navbar-nav mr-auto justify-content-center">
         <li class="nav-item">
-          <a class="nav-link" href="Index.php#navbar"><i class="fas fa-home fa-2x"></i></a>
+          <a class="nav-link" href="Index.php#logo"><i class="fas fa-home fa-2x"></i></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="counter.php?type=cs#navbar">Counter-Strike</a>
+          <a class="nav-link" href="counter.php?type=cs#logo">Counter-Strike</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="lol_main.php?type=lol#navbar">League of Legends</a>
+          <a class="nav-link" href="lol_main.php?type=lol#logo">League of Legends</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link disabled" href="#">Dota 2</a>
+          <a class="nav-link disabled" href="#logo">Dota 2</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link disabled" href="#">Hearthstone</a>
+          <a class="nav-link disabled" href="#logo">Hearthstone</a>
         </li>
         </ul>
 
