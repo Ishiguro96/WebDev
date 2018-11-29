@@ -16,7 +16,7 @@
   <div class="container">
     <div class="row">
 
-      <?php include('cs_menu.php'); ?>
+      <?php include('Menu.php'); ?>
 
       <div class="col-md order-md-1 h-100 content" id="content">
         About CS:GO

@@ -4,10 +4,24 @@
 ?>
 
 <div class="col-md-auto order-md-2 submenu h-100" id="submenu">
-  <a id="link" href="Index.php">Smth 1</a>
-  <a id="link" href="Index.php">Smth 2</a>
-  <a id="link" href="Index.php">Smth 3</a>
-  <a id="link" href="Index.php">Smth 4</a>
+  <?php if(isset($_GET['type']) ){ ?>
+    <?php
+      if($_GET['type'] == 'cs') {
+        include('cs_menu.php');
+      }
+      else if($_GET['type'] == 'lol'){
+        include('lol_menu.php');
+      }
+      else if($_GET['type'] == 'dota'){
+        include('dota_menu.php');
+      }
+    ?>
+  <?php } else {?>
+    <a id="link" href="Index.php">Smth 1</a>
+    <a id="link" href="Index.php">Smth 2</a>
+    <a id="link" href="Index.php">Smth 3</a>
+    <a id="link" href="Index.php">Smth 4</a>
+  <?php } ?>
   <hr style="background-color: orange">
   <?php if(isset($_SESSION['logged_in'])){ ?>
     <a id="link" href="Userpanel.php">User Panel</a></li>

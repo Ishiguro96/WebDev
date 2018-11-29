@@ -15,13 +15,13 @@
       <div class="collapse navbar-collapse" id="navbarCollapse">
         <ul class="navbar-nav mr-auto justify-content-center">
         <li class="nav-item">
-          <a class="nav-link" href="Index.php"><i class="fas fa-home fa-2x"></i></a>
+          <a class="nav-link" href="Index.php#navbar"><i class="fas fa-home fa-2x"></i></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="counter.php#navbar">Counter-Strike</a>
+          <a class="nav-link" href="counter.php?type=cs#navbar">Counter-Strike</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="lol_main.php">League of Legends</a>
+          <a class="nav-link" href="lol_main.php?type=lol#navbar">League of Legends</a>
         </li>
         <li class="nav-item">
           <a class="nav-link disabled" href="#">Dota 2</a>
