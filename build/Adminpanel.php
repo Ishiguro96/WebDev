@@ -32,10 +32,10 @@
 
       <?php include('Menu.php'); ?>
 
-      <div class="col-md-10 order-md-1 h-100 content" style="border: 1px dashed yellow">
+      <div class="col-md-10 order-md-1 h-100 content">
         <h1>ADMIN PANEL</h1>
 
-        <input type="button" onclick="location.href='Adminpanel_userspermissions.php';" value="Change users permissions" />
+        <button class="btn btn-outline-warning" onclick="location.href='Adminpanel_userspermissions.php#logo';">Change users' permissions</button>
       </div>
     </div>
   </div>

@@ -83,7 +83,7 @@
 
         <form action="<?php echo $_SERVER['PHP_SELF']; ?>" class="fsearch" method="post">
           <input type="text" placeholder="Search username" name="search-username">
-          <button type="submit" class="b-search"><i class="fas fa-search fa-1x"></i></button>
+          <button class="btn btn-outline-warning btn-sm" type="submit" class="b-search"><i class="fas fa-search fa-1x"></i></button>
         </form>
 
 
@@ -129,7 +129,7 @@
                 <form method="post" id='deletion<?php echo $user_results['ID']; ?>'>
                   <?php if($user_results['name'] != 'superadmin') { ?>
                   <input type="hidden" id="username_form_adminpanel" name="user_ID" value="<?php echo $user_results['ID']; ?>">
-                  <button type="button" onclick="PopUp(<?php echo $user_results['ID']; ?>);"><i class="fas fa-times-circle"></i></button>
+                  <button class="btn btn-outline-warning btn-sm" type="button" onclick="PopUp(<?php echo $user_results['ID']; ?>);"><i class="fas fa-times-circle"></i></button>
                   <?php } ?>
                 </form>
               </td>

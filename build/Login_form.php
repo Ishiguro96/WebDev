@@ -11,7 +11,7 @@
 
   <?php } else { ?>
 
-    <form class="form-inline justify-content-center" action = "Login.php" method = "post">
+    <form class="form-inline justify-content-center" action = "Login.php#logo" method = "post">
       <input class="form-control-sm mr-sm-2" type = "text" name = "username" class = "box" placeholder="Username"/><br><br>
       <input class="form-control-sm mr-sm-2" type = "password" name = "password" class = "box" placeholder="Password"/><br><br>
       <button class="btn btn-outline-warning btn-sm" type="submit"><i class="fas fa-sign-in-alt"></i></button>
