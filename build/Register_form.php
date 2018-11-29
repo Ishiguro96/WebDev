@@ -96,20 +96,21 @@
 
       <?php include('Menu.php'); ?>
 
-      <div class="col-md-10 order-md-1 h-100 content" style="border: 1px dashed yellow">
+      <div class="col-md-10 order-md-1 h-100 content">
 				<h2 id="registration_title">Registration form</h2>
 				<p id="register">Register new user:</p>
-				<form action = "<?php echo $_SERVER['PHP_SELF']; ?>" method = "post">
+				<form action = "<?php echo $_SERVER['PHP_SELF']; ?>#logo" method = "post">
 					<label>Username* :</label> <input type = "text" name = "register_username" class = "box"/><br><br>
 					<label>E-mail* :</label> <input type = "text" name = "register_email" class = "box" /><br><br>
 					<label>Password* :</label> <input type = "password" name = "register_password" class = "box" /><br><br>
 					<label>Confirm password* :</label> <input type = "password" name = "register_confirm_password" class = "box" /><br><br>
-					<input type = "submit" value = " Submit "/><br/>
+					<button class="btn btn-outline-warning" type="submit" class>Submit</button>
 				</form>
 
-				<hr>
-
 				<?php
+					if(!empty($register_errors)){ ?>
+						<hr style="background-color: orange">
+				<?php }
 					foreach($register_errors as $err){ ?>
 						<div class="alert alert-danger" role="alert">
   						<?php echo $err; ?>

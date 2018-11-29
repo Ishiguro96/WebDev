@@ -145,15 +145,15 @@
           <label>Old password :</label> <input type = "password" name = "old_password" class = "box"/><br><br>
           <label>New password :</label> <input type = "password" name = "new_password" class = "box" /><br><br>
           <label>Repeat new password :</label> <input type = "password" name = "new_password_repeat" class = "box" /><br><br>
-          <input type = "submit" value = "Change password" name="Change_password_request"/><br/>
+          <button class="btn btn-outline-warning" type="submit" name="Change_password_request">Change password</button>
         </form>
 
         <hr style="background-color: orange">
 
         <p id="userpanel">Change email:</p>
           <form action = "<?php echo $_SERVER['PHP_SELF']; ?>" method = "post">
-          <label>New e-mail :</label> <input type = "text" name = "new_mail" class = "box"/><br><br>
-          <input type = "submit" value = "Change e-mail" name="Change_email_request"/><br/>
+            <label>New e-mail :</label> <input type = "text" name = "new_mail" class = "box"/><br><br>
+            <button class="btn btn-outline-warning" type="submit" name="Change_email_request">Change e-mail</button>
         </form>
 
         <?php
