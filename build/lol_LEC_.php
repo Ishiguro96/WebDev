@@ -19,6 +19,7 @@
       <?php include('Menu.php'); ?>
 
       <div class="col-md order-md-1 h-100 content">
+        <img class="lol-content-image" src="Assets/Images/lec.jpg" alt="LoL">
         Welcome to League of Legends European Championship. LEC is the name for our brand new European league, but you’ll be familiar with our ethos. We move the game forward, proudly united by our passion for world class competitive play and incredible spectacle.
 
   We do that by welcoming everyone from everywhere. Our league is incredibly diverse, bringing together fans and professional players from over 40 countries. You see, our shared love for the game is what makes this league unique.
