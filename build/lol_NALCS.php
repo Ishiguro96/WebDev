@@ -29,18 +29,100 @@
   The buy-in price for the league was $10 million for existing League of Legends teams, who had previously participated in the League Championship Series or Challenger Series. New teams would be subject to an additional $3 million (a total $13 million), which was distributed to the teams that were replaced in the league. Interested parties were given applications in June, due on July 28, 2017. Over 100 existing esports organizations, traditional sports teams, venture capitalists and entrepreneurs reportedly applied.]Those applications were then narrowed down to a shortlist, nicknamed "phase two", which saw participants travel to Riot Games' Los Angeles office to interview and review their applications. Riot Games and the North American League Championship Series players' association also decided that league would not expand and instead remain at 10 teams.
           </p1>
             <p2> We have 10 organisations at the moment in NA LCS (they will be presented in order from last split)</p2>
-              <div class="NA_Teams" >
-                <a class="Team" id="link" href="https://www.liquidlegends.net/">1.Team Liquid</a>
-                <a class="Team" id="link" href="http://cloud9.gg/lol">2.Cloud9</a>
-                <a class="Team" id="link" href="https://www.100thieves.com/teams">3.100 Thieves</a>
-                <a class="Team" id="link" href="https://www.echofox.gg/teams/league-of-legends-lcs">4.Echo Fox</a>
-                <a class="Team" id="link" href="https://tsm.gg/teams">5.Team SoloMid</a>
-                <a class="Team" id="link" href="#">6.FlyQuest</a>
-                <a class="Team" id="link" href="https://greenwall.gg/teams">7.OpTic Gaming</a>
-                <a class="Team" id="link" href="https://www.clg.gg/clg-league-of-legends/">8.Counter Logic Gaming</a>
-                <a class="Team" id="link" href="http://www.clutchlcs.com/">9.Clutch Gaming</a>
-                <a class="Team" id="link" href="https://www.goldenguardians.com/team">10.Golden Guardians</a>
-              </div>
+            <div class="table-responsive">
+              <table class="table">
+                <thead class="thead-light">
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Organisation</th>
+                    <th scope="col">Coach</th>
+                    <th scope="col">logo</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">1</th>
+                    <td>
+                      <a class="Team" id="link" href="https://www.liquidlegends.net/">Team Liquid</a>
+                    </td>
+                    <td >Nu-ri "Cain" Jang</td>
+                    <td><img class="TL_logo" src="Assets/Images/TL.png" alt="TL"></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">2</th>
+                    <td>
+                      <a class="Team" id="link" href="https://www.cloud9.gg/pages/lol">Cloud9</a>
+                    </td>
+                    <td> Han-Gyu "Reapered" Bok</td>
+                    <td><img class="C9_Logo" src="Assets/Images/C9.jpg" alt="C9"></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">3</th>
+                    <td>
+                      <a class="Team" id="link" href="https://www.100thieves.com/teams">100 Thieves</a>
+                    </td>
+                    <td>Prolly</td>
+                    <td><img class="100T_Logo" src="Assets/Images/100T.png" alt="100T"></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">4</th>
+                    <td>
+                      <a class="Team" id="link" href="https://www.echofox.gg/teams/league-of-legends-lcs">Echo Fox</a>
+                    </td>
+                    <td>Inerd</td>
+                    <td><img class="Echo_logo" src="Assets/Images/Echo_.png" alt="Echo_"></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">5</th>
+                    <td>
+                      <a class="Team" id="link" href="https://tsm.gg/teams">Team SoloMid</a>
+                    </td>
+                    <td>Ssong</td>
+                    <td><img class="TSM_logo" src="Assets/Images/TSM.jpg" alt="TSM"></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">6</th>
+                    <td><a class="Team" id="link" href="https://www.flyquest.gg/">FlyQuest</a></td>
+                    <td>SaintVicious</td>
+                    <td><img class="FQ_logo" src="Assets/Images/FQ.png" alt="FQ"></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">7</th>
+                    <td>
+                      <a class="Team" id="link" href="https://greenwall.gg/teams">OpTic Gaming</a>
+                    </td>
+                    <td>Thomas "Zaboutine" Si-Hassen</td>
+                    <td><img class="Optic_logo" src="Assets/Images/OpTic.png" alt="Optic"></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">8</th>
+                    <td>
+                      <a class="Team" id="link" href="https://www.clg.gg/clg-league-of-legends/">Counter Logic Gaming</a>
+                    </td>
+                    <td>Zach</td>
+                    <td><img class="CLG_logo" src="Assets/Images/CLG.png" alt="CLG"></td>
+                  </tr>
+                  <tr>
+                    <tr>
+                      <th scope="row">9</th>
+                      <td>
+                        <a class="Team" id="link" href="http://www.clutchlcs.com/">Clutch Gaming</a>
+                      </td>
+                      <td>Curry</td>
+                      <td><img class="CG_logo" src="Assets/Images/CG.png" alt="CG"></td>
+                    </tr>
+                  </tr>
+                  <tr>
+                    <th scope="row">10</th>
+                    <td>
+                      <a class="Team" id="link" href="https://www.goldenguardians.com/team">Golden Guardians</a>
+                    </td>
+                    <td>Inero</td>
+                    <td><img class="GG_logo" src="Assets/Images/GG.png" alt="GG"></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
       </div>
     </div>
   </div>

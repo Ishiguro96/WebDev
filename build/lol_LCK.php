@@ -30,18 +30,101 @@ The LCK is widely considered to be the strongest League of Legends competition i
         </p>
         <p2> Teams below will be placed depending on their place in last splits
         </p2>
-        <div class="NA_Teams" >
-          <a class="Team" id="link" href="https://www.lolesports.com/en_US/lck/lck_2018_summer/teams/griffin">1.Griffin</a>
-          <a class="Team" id="link" href="https://www.lolesports.com/en_US/lck/lck_2018_summer/teams/kt-rolster">1.KT Rolster</a>
-          <a class="Team" id="link" href="https://www.lolesports.com/en_US/lck/lck_2018_summer/teams/kingzone-dragonx">3.King-Zone DragonX</a>
-          <a class="Team" id="link" href="https://www.lolesports.com/en_US/lck/lck_2018_summer/teams/geng">4.Gen. G. eSports/a>
-          <a class="Team" id="link" href="https://www.lolesports.com/en_US/lck/lck_2018_summer/teams/afreeca-freecs">5.Afreeca Freecs</a>
-          <a class="Team" id="link" href="https://www.lolesports.com/en_US/lck/lck_2018_summer/teams/hanwha-life-esports">6.Hanwha Life eSports</a>
-          <a class="Team" id="link" href="https://www.lolesports.com/en_US/lck/lck_2018_summer/teams/sktelecom-t1">7.SK Telecom T1</a>
-          <a class="Team" id="link" href="https://www.lolesports.com/en_US/lck/lck_2018_summer/teams/jin-air-green-wings">8.Jin Air Greenwings</a>
-          <a class="Team" id="link" href="https://www.lolesports.com/en_US/lck/lck_2018_summer/teams/mvp">9.MVP</a>
-          <a class="Team" id="link" href="https://www.lolesports.com/en_US/lck/lck_2018_summer/teams/bbq-olivers">10.BBQ Olivers</a>
-        </div>
+          <div class="table-responsive">
+            <table class="table">
+              <thead class="thead-light">
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">Organisation</th>
+                  <th scope="col">Coach</th>
+                  <th scope="col">logo</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">1</th>
+                  <td>
+                    <a class="Team" id="link" href="https://www.lolesports.com/en_US/lck/lck_2018_summer/teams/griffin">Griffin</a>
+                  </td>
+                  <td >Daeho "cvMax" Kim</td>
+                  <td><img class="Griffin_logo" src="Assets/Images/Griffin.png" alt="Griffin"></td>
+                </tr>
+                <tr>
+                  <th scope="row">1</th>
+                  <td>
+                    <a class="Team" id="link" href="https://www.lolesports.com/en_US/lck/lck_2018_summer/teams/kt-rolster">KT Rolster</a>
+                  </td>
+                  <td> Jesung "Noexcuse" Jeong</td>
+                  <td><img class="KT_Logo" src="Assets/Images/KT.png" alt="KT"></td>
+                </tr>
+                <tr>
+                  <th scope="row">3</th>
+                  <td>
+                    <a class="Team" id="link" href="https://www.lolesports.com/en_US/lck/lck_2018_summer/teams/kingzone-dragonx">King-Zone DragonX</a>
+                  </td>
+                  <td>Donghoon "Hirai" Kang</td>
+                  <td><img class="KZ_Logo" src="Assets/Images/KZ.png" alt="KZ"></td>
+                </tr>
+                <tr>
+                  <th scope="row">4</th>
+                  <td>
+                  <a class="Team" id="link" href="https://www.lolesports.com/en_US/lck/lck_2018_summer/teams/geng">Gen. G. eSports/a>
+                  </td>
+                  <td>Woobum Choi</td>
+                  <td><img class="GenG_logo" src="Assets/Images/GenG.png" alt="GenG"></td>
+                </tr>
+                <tr>
+                  <th scope="row">5</th>
+                  <td>
+                    <a class="Team" id="link" href="https://www.lolesports.com/en_US/lck/lck_2018_summer/teams/afreeca-freecs">Afreeca Freecs</a>
+                  </td>
+                  <td>Hyesung "Comet" Lim</td>
+                  <td><img class="AF_logo" src="Assets/Images/AF.png" alt="AF"></td>
+                </tr>
+                <tr>
+                  <th scope="row">6</th>
+                  <td>
+                    <a class="Team" id="link" href="https://www.lolesports.com/en_US/lck/lck_2018_summer/teams/hanwha-life-esports">Hanwha Life eSports</a>
+                  </td>
+                  <td>Hyunjong "World Series" Kang</td>
+                  <td><img class="HW_logo" src="Assets/Images/HW.png" alt="HW"></td>
+                </tr>
+                <tr>
+                  <th scope="row">7</th>
+                  <td>
+                    <a class="Team" id="link" href="https://www.lolesports.com/en_US/lck/lck_2018_summer/teams/sktelecom-t1">SK Telecom T1</a>
+                  </td>
+                  <td>TJeonggyun "kkOma" Kim</td>
+                  <td><img class="SKT_logo" src="Assets/Images/SKT.png" alt="SKT"></td>
+                </tr>
+                <tr>
+                  <th scope="row">8</th>
+                  <td>
+                    <a class="Team" id="link" href="https://www.lolesports.com/en_US/lck/lck_2018_summer/teams/jin-air-green-wings">Jin Air Greenwings</a>
+                  </td>
+                  <td>Sangyong Han</td>
+                  <td><img class="JA_logo" src="Assets/Images/JA.png" alt="JA"></td>
+                </tr>
+                <tr>
+                  <tr>
+                    <th scope="row">9</th>
+                    <td>
+                      <a class="Team" id="link" href="https://www.lolesports.com/en_US/lck/lck_2018_summer/teams/mvp">MVP</a>
+                    </td>
+                    <td>Jaehwan "Hell" Kwon</td>
+                    <td><img class="MVP_logo" src="Assets/Images/MVP.png" alt="MVP"></td>
+                  </tr>
+                </tr>
+                <tr>
+                  <th scope="row">10</th>
+                  <td>
+                    <a class="Team" id="link" href="https://www.lolesports.com/en_US/lck/lck_2018_summer/teams/bbq-olivers">BBQ Olivers</a>
+                  </td>
+                  <td> Kim "TUKSAMA" Karam</td>
+                  <td><img class="BBQ_logo" src="Assets/Images/BBQ.png" alt="BBQ"></td>
+                </tr>
+              </tbody>
+            </table>
       </div>
     </div>
   </div>
