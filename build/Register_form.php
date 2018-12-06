@@ -96,7 +96,7 @@
 
       <?php include('Menu.php'); ?>
 
-      <div class="col-md-10 order-md-1 h-100 content">
+      <div class="col-md order-md-1 h-100 content">
 				<h2 id="registration_title">Registration form</h2>
 				<p id="register">Register new user:</p>
 				<form action = "<?php echo $_SERVER['PHP_SELF']; ?>#logo" method = "post">

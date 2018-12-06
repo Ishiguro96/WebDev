@@ -5,6 +5,6 @@
 	session_start();
 
 	if(session_destroy()){
-		header("Location: Index.php");
+		header("Location: Index.php#navbar");
 	}
 ?>

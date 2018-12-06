@@ -19,19 +19,24 @@
         include('hearth_menu.php');
       }
     ?>
+    <hr style="background-color: orange">
   <?php } else {?>
-    <a id="link" href="Index.php#logo">Smth 1</a>
-    <a id="link" href="Index.php#logo">Smth 2</a>
-    <a id="link" href="Index.php#logo">Smth 3</a>
-    <a id="link" href="Index.php#logo">Smth 4</a>
+
   <?php } ?>
-  <hr style="background-color: orange">
   <?php if(isset($_SESSION['logged_in'])){ ?>
-    <a id="link" href="Userpanel.php#logo">User Panel</a></li>
+    <button class="btn btn-outline-warning" onclick="location.href='Userpanel.php#navbar';">
+      User Panel
+    </button>
+    <br><br>
+
   <?php if($_SESSION['user_rank'] == 'superadmin' || $_SESSION['user_rank'] == 'admin'){ ?>
-    <a id="link" href="Adminpanel.php#logo">Admin Panel</a></li>
+    <button class="btn btn-outline-warning" onclick="location.href='Adminpanel.php#navbar';">
+      Admin Panel
+    </button>
   <?php } ?>
   <?php } else { ?>
-    <a id="link" href="Register_form.php#logo">Register</a></li>
+    <button class="btn btn-outline-warning" onclick="location.href='Register_form.php#navbar';">
+      Register
+    </button>
   <?php } ?>
 </div>

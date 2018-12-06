@@ -52,7 +52,10 @@ header {
     padding: 10px; }
 
 .content {
-  margin-right: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: 5px;
+  margin-right: 5px;
   background-color: rgba(80, 80, 80, 0.2);
   padding: 12px;
   text-align: justify;
@@ -72,6 +75,12 @@ header {
   opacity: 0.8; }
 
 .submenu {
+  display: block;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: 5px;
+  margin-right: 5px;
   background-color: rgba(80, 80, 80, 0.2);
   border-radius: 16px;
   padding-top: 10px;
@@ -88,6 +97,9 @@ header {
   position: fixed;
   top: 50%;
   right: 0px; }
+
+.dropdown-menu {
+  background-color: black; }
 
 .fsearch {
   margin-top: 16px;
