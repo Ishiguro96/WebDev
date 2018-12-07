@@ -3,11 +3,11 @@
         header("Location: Index.php");
 ?>
 
-<button class="btn btn-outline-warning" onclick="location.href='lol_news.php?type=lol#navbar';">
+<button class="btn btn-outline-warning btn-menu" onclick="location.href='lol_news.php?type=lol#navbar';">
   News
 </button><br><br>
 <div class="dropdown">
-  <button type="button" class="btn btn-outline-warning btn-sm dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+  <button type="button" class="btn btn-outline-warning btn-sm dropdown-toggle btn-menu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
   Professional Leagues
   </button><br><br>
   <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" style="background-color: black">
@@ -19,7 +19,7 @@
 </div>
 
 <div class="dropdown">
-  <button type="button" class="btn btn-outline-warning btn-sm dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+  <button type="button" class="btn btn-outline-warning btn-sm dropdown-toggle btn-menu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
     LEC Teams
   </button><br><br>
   <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" style="background-color: black">
@@ -35,6 +35,6 @@
     <a class="dropdown-item" id="link" href="lol_Rogue.php?type=lol#navbar">Rogue</a>
   </div>
 </div>
-<button class="btn btn-outline-warning" onclick="location.href='lol_calendar.php?type=lol#navbar';">
+<button class="btn btn-outline-warning btn-menu" onclick="location.href='lol_calendar.php?type=lol#navbar';">
   Callendar
 </button>

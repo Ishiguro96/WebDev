@@ -79,7 +79,7 @@
 
       <?php include('Menu.php'); ?>
 
-      <div class="col-md-10 order-md-1 h-100 content">
+      <div class="col-md order-md-1 h-100 content">
 
         <form action="<?php echo $_SERVER['PHP_SELF']; ?>" class="fsearch" method="post">
           <input type="text" placeholder="Search username" name="search-username">

@@ -101,6 +101,9 @@ header {
 .dropdown-menu {
   background-color: black; }
 
+.btn-menu {
+  width: 100%; }
+
 .fsearch {
   margin-top: 16px;
   text-align: center; }
@@ -121,6 +124,64 @@ table.tsearch {
     text-align: center; }
   table.tsearch tr:nth-child(odd) {
     background-color: #837f7f; }
+
+.adminpanel {
+  display: inline; }
+
+.addnews {
+  padding: 5px; }
+  .addnews textarea {
+    width: 100%; }
+  .addnews #title {
+    width: 80%; }
+  .addnews #category {
+    width: 40%; }
+  .addnews #image {
+    width: 40%; }
+  .addnews #source {
+    width: 80%; }
+
+.news {
+  width: 100%;
+  text-align: justify; }
+  .news #news_author {
+    float: left;
+    color: #9c9c9c; }
+  .news #news_title {
+    color: orange; }
+  .news #news_hr {
+    background-color: orange; }
+  .news #news_date {
+    float: right;
+    color: #9c9c9c; }
+  .news #news_img {
+    margin-top: 8px;
+    margin-bottom: 8px;
+    width: 100%;
+    border: 0px;
+    border-radius: 12px; }
+  .news #news_cat {
+    text-align: center;
+    color: orange; }
+  .news #news_content {
+    background-color: rgba(167, 167, 167, 0.2);
+    padding: 12px;
+    border: 0px;
+    border-radius: 16px;
+    float: left;
+    white-space: pre-wrap;
+    text-align: justify; }
+  .news #news_link {
+    text-decoration: none;
+    color: orange; }
+
+.NA-Teams {
+  display: inline;
+  color: white; }
+  .NA-Teams a {
+    display: inline-block;
+    text-decoration: none;
+    color: orange; }
 
 .sticky.is-sticky {
   border: 0px;

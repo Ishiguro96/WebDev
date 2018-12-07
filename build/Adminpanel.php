@@ -32,10 +32,16 @@
 
       <?php include('Menu.php'); ?>
 
-      <div class="col-md-10 order-md-1 h-100 content">
-        <h1>ADMIN PANEL</h1>
+      <div class="col-md order-md-1 h-100 content adminpanel">
+        <h1>Admin Panel</h1>
 
-        <button class="btn btn-outline-warning" onclick="location.href='Adminpanel_userspermissions.php#logo';">Change users' permissions</button>
+        <button class="btn btn-outline-warning" onclick="location.href='Adminpanel_userspermissions.php#navbar';">
+          Change users' permissions
+        </button>
+
+        <button class="btn btn-outline-warning" onclick="location.href='Adminpanel_addnews.php#navbar';">
+          Add news
+        </button>
       </div>
     </div>
   </div>

@@ -24,18 +24,18 @@
 
   <?php } ?>
   <?php if(isset($_SESSION['logged_in'])){ ?>
-    <button class="btn btn-outline-warning" onclick="location.href='Userpanel.php#navbar';">
+    <button class="btn btn-outline-warning btn-menu" onclick="location.href='Userpanel.php#navbar';">
       User Panel
     </button>
     <br><br>
 
   <?php if($_SESSION['user_rank'] == 'superadmin' || $_SESSION['user_rank'] == 'admin'){ ?>
-    <button class="btn btn-outline-warning" onclick="location.href='Adminpanel.php#navbar';">
+    <button class="btn btn-outline-warning btn-menu" onclick="location.href='Adminpanel.php#navbar';">
       Admin Panel
     </button>
   <?php } ?>
   <?php } else { ?>
-    <button class="btn btn-outline-warning" onclick="location.href='Register_form.php#navbar';">
+    <button class="btn btn-outline-warning btn-menu" onclick="location.href='Register_form.php#navbar';">
       Register
     </button>
   <?php } ?>

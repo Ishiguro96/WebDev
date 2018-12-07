@@ -18,7 +18,7 @@
 
       <?php include('Menu.php'); ?>
 
-      <div class="col-md order-md-1 h-100 content">
+      <div class="col-md order-md-1 h-100 content NA-Teams">
         <img class="lol-content-image" src="Assets/Images/lck.jpg" alt="LoL">
         <h1>LCK
         </h1>
@@ -30,7 +30,7 @@ The LCK is widely considered to be the strongest League of Legends competition i
         </p>
         <p2> Teams below will be placed depending on their place in last splits
         </p2>
-          <div class="table-responsive">
+          <div class="table-responsive table-dark">
             <table class="table">
               <thead class="thead-light">
                 <tr>
