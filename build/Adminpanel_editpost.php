@@ -44,10 +44,6 @@
     $query2 = mysqli_query($db, $sql2);
 ?>
 
-<?php
-    session_start();
-?>
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -65,7 +61,7 @@
       <?php include('Menu.php'); ?>
 
       <div class="col-md order-md-1 h-100 content adminpanel">
-        <h1><?php echo $news_id; ?></h1><br>
+        <h1>Edit News</h1><br>
         <center>
         <form action="<?php echo $_SERVER['PHP_SELF']; ?>" id="addnews" class="addnews" method="post">
           <input id="title" name="title" value="<?php echo $title; ?>"></input>

@@ -30,10 +30,6 @@
     $query = mysqli_query($db, $sql);
 ?>
 
-<?php
-    session_start();
-?>
-
 <!DOCTYPE html>
 <html>
 <head>
