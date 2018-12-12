@@ -35,6 +35,3 @@
     <a class="dropdown-item" id="link" href="lol_Rogue.php?type=lol#navbar">Rogue</a>
   </div>
 </div>
-<button class="btn btn-outline-warning btn-menu" onclick="location.href='lol_calendar.php?type=lol#navbar';">
-  Callendar
-</button>

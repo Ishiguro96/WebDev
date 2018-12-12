@@ -205,3 +205,9 @@ footer {
   text-align: center;
     text-align-padding: 2px;
     text-align-font-style: italic; }
+
+.major tr th {
+  line-height: 256px; }
+
+h1 {
+  color: orange; }

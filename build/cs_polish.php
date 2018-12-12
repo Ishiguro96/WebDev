@@ -36,9 +36,9 @@
             Lets see whatt do we know about those 3 teams these days.
           </p>
           <br>
-          <h2>
+          <h1 class="text-center">
             Virtus.Pro
-          </h2>
+          </h1>
           <bro>
           <p>
             <img class="lol-content-image" src="Assets/Images/VP_team.png" alt="LoL">
@@ -49,9 +49,9 @@
           <br>
           <br>
           <br>
-          <h2>
+          <h1 class="text-center">
             AGO Esports
-          </h2>
+          </h1>
           <br>
           <p>
             <img class="lol-content-image" src="Assets/Images/Ago.png" alt="LoL">
@@ -63,9 +63,9 @@
           <br>
           <br>
           <br>
-          <h2>
+          <h1 class="text-center">
             Team Kinguin
-          </h2>
+          </h1>
           <br>
           <p>
             <img class="lol-content-image" src="Assets/Images/kinguin_team.jpg" alt="LoL">
