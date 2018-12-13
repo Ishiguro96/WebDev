@@ -2,6 +2,10 @@ html body {
   background-image: linear-gradient(black, #333333);
   font-family: sans-serif;
   color: #ffffff; }
+  html body a {
+    display: inline-block;
+    text-decoration: none;
+    color: orange; }
 
 html {
   -ms-text-size-adjust: 100%;
