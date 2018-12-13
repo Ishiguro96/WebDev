@@ -61,6 +61,10 @@ header {
   text-align: justify;
   border: 0px;
   border-radius: 16px; }
+  .content a {
+    display: inline-block;
+    text-decoration: none;
+    color: orange; }
 
 .lolcontent {
   background-color: white;
@@ -210,4 +214,8 @@ footer {
   line-height: 256px; }
 
 h1 {
+  color: orange;
+  text-align: center; }
+
+h5 {
   color: orange; }

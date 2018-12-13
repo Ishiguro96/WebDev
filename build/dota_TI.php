@@ -20,9 +20,10 @@
 
       <div class="col-md order-md-1 h-100 content">
         <img class="lol-content-image" src="Assets/Images/TI_2018.jpg" alt="TI_2018">
-          <h1 style="text-align: justify;">
-            The International 2018 is the concluding tournament of the Dota Pro Circuit and the eighth annual edition of The International. The tournament will be held on Canadian soil for the first time, as it moves to the Rogers Arena in Vancouver, Canada. For the first time, a point system based on official sponsored Majors and Minors were used to determine invites to The International.
-          </h1>
+          <h6>
+            The International 2018 is the concluding tournament of the Dota Pro Circuit and the eighth annual edition of The International. The tournament will be held
+            on Canadian soil for the first time, as it moves to the Rogers Arena in Vancouver, Canada. For the first time, a point system based on official sponsored Majors and Minors were used to determine invites to The International.
+          </h6>
           <span>
           <h2 class="text-center">
             Format
@@ -32,7 +33,7 @@
           </h3>
           <p>
             Twelve Regional Single-elimination Open Qualifiers, two brackets for each region.
-The winners of each Open Qualifier will advance to the respective Main Qualifier.
+            The winners of each Open Qualifier will advance to the respective Main Qualifier.
           <p>
           <br>
           <h3 class="text-center">
@@ -55,9 +56,9 @@ The winners of each Open Qualifier will advance to the respective Main Qualifier
           <h2 class="text-center">
             Group Stage - August 15th - August 18th, 2018
           </h2>
-          <h3 class="text-center">
+          <h4 class="text-center">
             All eighteen teams are divided into two groups where they play in a Round Robin format.
-          </h3>
+          </h4>
           <p class="text-center">
               All matches are played in a Bo2.
           </p>

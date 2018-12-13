@@ -33,8 +33,8 @@
           Here's a list of majors/minors in this season
         </h2>
         <br>
-        <table class="table-responsive table-dark "  style="text-align: center;">
-          <table class="table" class="major-dota" >
+        <div class="table-responsive table-dark major-dota "  style="text-align: center;">
+          <table class="table"  >
             <thead>
               <tr>
                 <th class="align-middle" scope="col">Date</th>
