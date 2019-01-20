@@ -4,6 +4,7 @@
     session_start();
 
     if($_SERVER['REQUEST_METHOD'] == 'POST'){
+      // Get updated users' information from database
       if(ISSET($_POST['username'])){
         $tmp = $_POST['selected_rank'];
         $sql = "SELECT ID, name FROM ranks WHERE description='$tmp'";
@@ -14,19 +15,19 @@
         $sql = "UPDATE users INNER JOIN ranks ON users.rankID = ranks.ID  SET users.rankID='$temp2' WHERE users.username='$temp'";
         $query = mysqli_query($db, $sql);
 
+        // Update user's rank
         if($_SESSION['user_login'] == $_POST['username']){
             $_SESSION['user_rank'] = $result['name'];
         }
       }
-
+      // Check if we have to delete user from database
       else if(ISSET($_POST['user_ID'])){
-
         $temp = $_POST['user_ID'];
         $sql = "DELETE FROM users WHERE ID='$temp'";
         $query = mysqli_query($db, $sql);
       }
     }
-
+    // If user is not an administrator redirect to another page
     if(!$_SESSION['logged_in'] || !isset($_SESSION['user_rank'])){
       header("Location: Index.php");
     }
@@ -38,25 +39,25 @@
 
     $username = "";
     if($_SERVER['REQUEST_METHOD'] == "POST"){
+      // Escape special chars from search field
       $username = mysqli_real_escape_string($db, $_POST['search-username']);
     }
+    // Query users from database
     $user_check_query = "SELECT users.ID, users.username, ranks.description, ranks.name FROM users INNER JOIN ranks ON users.rankID = ranks.ID WHERE users.username LIKE '%$username%' ORDER BY users.ID ASC";
-
-
     $user_query_result = mysqli_query($db, $user_check_query);
 
+    // Query available ranks from database
     $available_ranks_query = "SELECT name, description FROM ranks";
     $available_ranks_result = mysqli_query($db, $available_ranks_query);
 
     $ranks = array();
 
+    // Push available ranks to array so it can be displayed
     while($available_ranks_results = mysqli_fetch_assoc($available_ranks_result)){
         array_push($ranks, $available_ranks_results['description']);
     }
 
     $iter = 0;
-
-
 ?>
 
 <!DOCTYPE html>

@@ -2,6 +2,7 @@
     session_start();
     require("Config.php"); //MySQL database
 
+    // If an user is not an administrator redirect him to main page
     if(!$_SESSION['logged_in'] || !isset($_SESSION['user_rank'])){
         header("Location: Index.php");
     }
@@ -9,8 +10,9 @@
         header("Location: Index.php");
     }
 
-    //Dodanie nowego newsa do bazy danych
+    // Add new post to database
     if($_SERVER['REQUEST_METHOD'] == 'POST'){
+      // Prevent from MySQL Injection
       $title = mysqli_real_escape_string($db, $_POST['title']);
       $content = mysqli_real_escape_string($db, $_POST['content']);
       $category = mysqli_real_escape_string($db, $_POST['category']);
@@ -21,10 +23,9 @@
       $sql = "INSERT INTO news (title, content, author, news_category, image, source) VALUES ('$title', '$content', '$author', '$category', '$image', '$source')";
       $query = mysqli_query($db, $sql);
 
+      // Return to main page
       header("Location: Index.php#navbar");
     }
-
-
 
     $sql = "SELECT id, description FROM news_category";
     $query = mysqli_query($db, $sql);

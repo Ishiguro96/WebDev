@@ -18,7 +18,7 @@
 
       <?php include('Menu.php'); ?>
 
-      <div class="col-md-10 order-md-1 h-100 content" style="border: 1px dashed yellow">
+      <div class="col-md order-md-1 h-100 content">
         TEMPLATE FILE
       </div>
     </div>

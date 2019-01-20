@@ -8,71 +8,81 @@
     $register_password = "";
     $register_confirm_password = "";
 
+		// Errors array
     $register_errors = array();
 
 	if($_SERVER['REQUEST_METHOD'] == 'POST'){
+		// Remove special characters from input variables
 		$register_username = mysqli_real_escape_string($db, $_POST['register_username']); //Remove special chars from username
-        $register_email = mysqli_real_escape_string($db, $_POST['register_email']); //Remove special chars from email
+    $register_email = mysqli_real_escape_string($db, $_POST['register_email']); //Remove special chars from email
 		$register_password = mysqli_real_escape_string($db, $_POST['register_password']); //Remove special chars from password
-        $register_confirm_password = mysqli_real_escape_string($db, $_POST['register_confirm_password']); //Remove special chars from password
+    $register_confirm_password = mysqli_real_escape_string($db, $_POST['register_confirm_password']); //Remove special chars from password
 
-        if(empty($register_username)){
-            array_push($register_errors, "Username cannot be empty!");
-        }
-        if(empty($register_email)){
-            array_push($register_errors, "E-mail cannot be empty!");
-        }
-        if(empty($register_password) || empty($register_confirm_password)){
-            array_push($register_errors, "Password cannot be empty!");
-        }
-        if($register_password != $register_confirm_password){
-            array_push($register_errors, "Passwords do not match!");
-        }
+		// Check emptiness of given variables
+	  if(empty($register_username)){
+	      array_push($register_errors, "Username cannot be empty!");
+	  }
+	  if(empty($register_email)){
+	      array_push($register_errors, "E-mail cannot be empty!");
+	  }
+	  if(empty($register_password) || empty($register_confirm_password)){
+	      array_push($register_errors, "Password cannot be empty!");
+	  }
+	  if($register_password != $register_confirm_password){
+	      array_push($register_errors, "Passwords do not match!");
+	  }
 
-        if(!VerifyUsername($register_username, 5)){
-            array_push($register_errors, "Invalid form of username!");
-        }
-        if(!VerifyEmail($register_email)){
-            array_push($register_errors, "Invalid e-mail adress!");
-        }
-        if(!VerifyPassword($register_password, 6)){
-            array_push($register_errors, "Invalid form of password");
-        }
+		// Verify variables using REGEX queries
+	  if(!VerifyUsername($register_username, 5)){
+	      array_push($register_errors, "Invalid form of username!");
+	  }
+	  if(!VerifyEmail($register_email)){
+	      array_push($register_errors, "Invalid e-mail adress!");
+	  }
+	  if(!VerifyPassword($register_password, 6)){
+	      array_push($register_errors, "Invalid form of password");
+	  }
 
-        $user_check_query = "SELECT * FROM users WHERE username='$register_username' OR email='$register_email'";
-        $user_query_result = mysqli_query($db, $user_check_query);
-        $user_results = mysqli_fetch_assoc($user_query_result);
+		// Query MySQL - check uniqueness of username and e-mail
+	  $user_check_query = "SELECT * FROM users WHERE username='$register_username' OR email='$register_email'";
+	  $user_query_result = mysqli_query($db, $user_check_query);
+	  $user_results = mysqli_fetch_assoc($user_query_result);
 
-        if(count($register_errors) == 0){
-            if(isset($user_results)){
-                if($user_results['username'] == $register_username){
-                    array_push($register_errors, "Username already exists!");
-                }
-                else if($user_results['email'] == $register_email){
-                    array_push($register_errors, "E-mail already exists!");
-                }
-            }
-        }
+		// Check if there were no errors
+	  if(count($register_errors) == 0){
+	      if(isset($user_results)){
+						// Check if user / email already exists
+	          if($user_results['username'] == $register_username){
+	              array_push($register_errors, "Username already exists!");
+	          }
+	          else if($user_results['email'] == $register_email){
+	              array_push($register_errors, "E-mail already exists!");
+	          }
+	      }
+	  }
 
-        if(count($register_errors) == 0){
-            $register_password = hash('sha512', $register_password);
-            $sql = "INSERT INTO users (username, password, email) VALUES ('$register_username', '$register_password', '$register_email')";
-            if($query_result = mysqli_query($db, $sql) === TRUE){ //Query above statement to MySQL
-                $sql = "SELECT users.username, users.ID, ranks.name FROM users INNER JOIN ranks ON users.rankID = ranks.ID  WHERE username = '$register_username' AND password='$register_password'";
-                $query_result = mysqli_query($db, $sql);
-                $results = mysqli_fetch_assoc($query_result);
+		// Check if there were no errors
+	  if(count($register_errors) == 0){
+				// Hash password and insert new data to mysql database
+	      $register_password = hash('sha512', $register_password);
+	      $sql = "INSERT INTO users (username, password, email) VALUES ('$register_username', '$register_password', '$register_email')";
+	      if($query_result = mysqli_query($db, $sql) === TRUE){ //Query above statement to MySQL
+	          $sql = "SELECT users.username, users.ID, ranks.name FROM users INNER JOIN ranks ON users.rankID = ranks.ID  WHERE username = '$register_username' AND password='$register_password'";
+	          $query_result = mysqli_query($db, $sql);
+	          $results = mysqli_fetch_assoc($query_result);
 
-                $_SESSION['user_login'] = $results["username"];
-                $_SESSION['user_id'] = $results["ID"];
-                $_SESSION['user_rank'] = $results["name"];
+						// Set session variables
+	          $_SESSION['user_login'] = $results["username"];
+	          $_SESSION['user_id'] = $results["ID"];
+	          $_SESSION['user_rank'] = $results["name"];
 
-                if(isset($_SESSION['user_login']) && isset($_SESSION['user_id']) && isset($_SESSION['user_rank'])){
-                    $_SESSION['logged_in'] = TRUE;
-                }
+	          if(isset($_SESSION['user_login']) && isset($_SESSION['user_id']) && isset($_SESSION['user_rank'])){
+	              $_SESSION['logged_in'] = TRUE;
+	          }
 
-                header("Location: Index.php");
-            }
-        }
+	          header("Location: Index.php");
+	      }
+	  }
 	}
 ?>
 
